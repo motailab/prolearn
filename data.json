@@ -19,6 +19,12 @@
             "description": "Questions about Modern World History will help you to understand even deeper about history.",
             "subject": "Physics",
             "id": 1,
+            "answers": [
+                {"question": 1, "guess": 3},
+                {"question": 2, "guess": 2},
+                {"question": 3, "guess": 4},
+                {"question": 4, "guess": 1}
+            ],
             "questions": [
                 {
                     "id": 1,
@@ -48,6 +54,17 @@
                         {"guess": "\\(5N\\)", "id": 2, "math": true},
                         {"guess": "\\(25N\\)", "id": 3, "math": true},
                         {"guess": "\\(40N\\)", "id": 4, "math": true}
+                    ]
+                },
+                {
+                    "id": 4,
+                    "question": "Two objects, A (mass 6kg) and B (mass 4kg), are stacked one on top of the other as shown.--B is pulled by a force of 20N and all surface are frictionless. What is the acceleration of A?",
+                    "hasImage": true,
+                    "guesses": [
+                        {"guess": "\\(0 m/s^2\\)", "id": 1, "math": true},
+                        {"guess": "\\(2 m/s^2\\)", "id": 2, "math": true},
+                        {"guess": "\\(3.3 m/s^2\\)", "id": 3, "math": true},
+                        {"guess": "\\(5 m/s^2\\)", "id": 4, "math": true}
                     ]
                 }
             ]

@@ -12,8 +12,10 @@ export const  reducers = (state={}, action) => {
             if(index >= 0) {
                 let completed_subject = state.completed_subject;
                 let selected = completed_subject[index];
+                
                 selected = {...selected, ...action.payload};
                 completed_subject[index] = selected;
+                
                 return {...state, completed_subject: [...completed_subject]};
             }
 

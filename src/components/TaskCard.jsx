@@ -4,12 +4,12 @@ import { AppContext } from '../context/context';
 
 export default function TaskCard({title, duration, description, ...rest}) {
     const { state } = useContext(AppContext);
-    const [isDone, setIsDone] = useState(false);
+    const [result, setResult] = useState({done: false, pass: false});
 
     useEffect(() => {
         const item = state.completed_subject.filter(item =>  title === item.name);
         if(item.length) {
-            setIsDone(item[0].done);
+            setResult({done: item[0].done, pass: item[0].pass});
         }
 
     }, [state, title]);
@@ -25,8 +25,11 @@ export default function TaskCard({title, duration, description, ...rest}) {
                     <div className="content">
                         {description ? description : 'Questions about Modern World History will help you to understand even deeper about history.'}
                     </div>
-                    <div className={isDone ? 'done' : 'd-none'}>
+                    <div className={result.done && result.pass ? 'done' : 'd-none'}>
                         <span className="text">Done !</span>
+                    </div>
+                    <div className={result.done === true && result.pass === false ? 'fail' : 'd-none'}>
+                        <span className="text">Opps.. Try again !</span>
                     </div>
                 </div>
             </NavLink>

@@ -5,8 +5,6 @@ import TaskListContainer from "./components/TaskListContainer";
 import SubjectContainer from './components/SubjectContainer';
 import { AppProvider } from './context/context';
 
-import "./App.css";
-
 function App() {
   return (
       <div className="main-panel">

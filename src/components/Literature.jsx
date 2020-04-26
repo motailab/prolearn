@@ -22,7 +22,8 @@ export default function Literature({subject}) {
             payload: {
                 done: true,
                 name: subject.title,
-                id: subject.id
+                id: subject.id,
+                pass: true
             }
         });
 
