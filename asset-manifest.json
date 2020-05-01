@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/prolearn/static/css/main.259bbef9.chunk.css",
+    "main.js": "/prolearn/static/js/main.11fbf57f.chunk.js",
+    "main.js.map": "/prolearn/static/js/main.11fbf57f.chunk.js.map",
+    "runtime-main.js": "/prolearn/static/js/runtime-main.afea68a5.js",
+    "runtime-main.js.map": "/prolearn/static/js/runtime-main.afea68a5.js.map",
+    "static/js/2.c7f85c71.chunk.js": "/prolearn/static/js/2.c7f85c71.chunk.js",
+    "static/js/2.c7f85c71.chunk.js.map": "/prolearn/static/js/2.c7f85c71.chunk.js.map",
+    "index.html": "/prolearn/index.html",
+    "precache-manifest.0c64b44105cd607c763ab3af0a47461c.js": "/prolearn/precache-manifest.0c64b44105cd607c763ab3af0a47461c.js",
+    "service-worker.js": "/prolearn/service-worker.js",
+    "static/css/main.259bbef9.chunk.css.map": "/prolearn/static/css/main.259bbef9.chunk.css.map",
+    "static/js/2.c7f85c71.chunk.js.LICENSE.txt": "/prolearn/static/js/2.c7f85c71.chunk.js.LICENSE.txt",
+    "static/media/diagram.svg": "/prolearn/static/media/diagram.dab5baf0.svg",
+    "static/media/logo.svg": "/prolearn/static/media/logo.9bff32ab.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.afea68a5.js",
+    "static/js/2.c7f85c71.chunk.js",
+    "static/css/main.259bbef9.chunk.css",
+    "static/js/main.11fbf57f.chunk.js"
+  ]
+}
