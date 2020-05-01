@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import logo from '../assets/images/logo.svg';
 
 function SideBar() {
@@ -9,10 +9,10 @@ function SideBar() {
             <Link to='/' className="logo"><img src={logo} alt=""/></Link>
             <ul>
             <li>
-                <a className="active" href="#">
-                <i className="fas fa-calculator"></i>
-                <span>Caroline </span>
-                </a>
+                <NavLink activeClassName="active" to="/subject">
+                    <i className="fas fa-calculator"></i>
+                    <span>Caroline </span>
+                </NavLink>
             </li>
             <li>
                 <a href="#">
@@ -21,10 +21,10 @@ function SideBar() {
                 </a>
             </li>
             <li>
-                <a href="#">
-                <i className="fas fa-tasks"></i>
-                <span>Supplementary classNameess</span>
-                </a>
+                <NavLink to="/supplimentary" activeClassName="active">
+                    <i className="fas fa-tasks"></i>
+                    <span>Supplementary classNameess</span>
+                </NavLink>
             </li>
             <li>
                 <a href="#">

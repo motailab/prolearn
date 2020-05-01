@@ -713,4 +713,31 @@ a:hover {
   margin: auto;
   display: block;
 }
+
+
+/* video player */
+.player-container {
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15) !important;
+  border-radius: 10px !important;
+  padding: 2.6% !important;
+}
+
+.match {
+  position: absolute;
+  bottom: 0;
+}
+.match h3 {
+  background: linear-gradient(to right, #D4145A  0%, #FBB03B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2em;
+  font-weight: 600;
+}
+.match p {
+  /* margin-left: auto; */
+  font-size: 1em;
+  margin: 0;
+  margin-left: 1em;
+}
+
 /*# sourceMappingURL=style.css.map */

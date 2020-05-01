@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { AppContext } from '../context/context';
-
 import { useParams } from 'react-router-dom';
+import { AppContext } from '../context/context';
 import TaskCard from './TaskCard';
 import Component from '../utils/Components';
 
