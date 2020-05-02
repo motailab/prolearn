@@ -3,13 +3,21 @@ import CustomScroll from 'react-custom-scroll';
 import { AppContext } from '../context/context';
 import TaskCard from './TaskCard';
 import RecomendedPlayer from './Recomended/RecomendedPlayer';
+import Spinner from './Spinner/Spinner';
 
 export default function TaskListContainer(params) {
     const [subject_list, setSubjectList] = useState([]);
+    const [showSpinner, setShowSpinner] = useState(true);
+
     const {state} = useContext(AppContext);
 
     useEffect(() => {
        setSubjectList(state.subjects);
+
+       if(state.subjects.length > 0) {
+            setShowSpinner(false);
+       }
+       
     }, [state]);
 
     return (
@@ -27,8 +35,17 @@ export default function TaskListContainer(params) {
 
                         <h4>Recomended Tasks</h4>
                         <div className="row">
-                            <RecomendedPlayer />
-                            <RecomendedPlayer />
+                            {
+                                showSpinner ?
+                                    <Spinner />
+                                :
+                                (
+                                    <>
+                                      <RecomendedPlayer />
+                                      <RecomendedPlayer />
+                                    </>
+                                 )
+                            }
                         </div>
                     </CustomScroll>
                 </div>
