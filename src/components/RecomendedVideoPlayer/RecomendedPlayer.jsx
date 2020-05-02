@@ -5,9 +5,9 @@ export default function RecomendedPlayer(props) {
 
     return (
         <div className="col-md-6">
-            <div className="card p-3 player-container">
-                <div className="d-flex justify-content-between">
-                    <div className='player-wrapper' style={{flexBasis: '70%'}}>
+            <div className="box player-container">
+                <div className="row">
+                    <div className='col-7'>
                         <ReactPlayer 
                         url="https://media.w3.org/2010/05/sintel/trailer_hd.mp4" 
                         width="100%" height="100%" 
@@ -15,14 +15,12 @@ export default function RecomendedPlayer(props) {
                         config={{ file: { attributes: { controlsList: 'nodownload' } } }}
                         onContextMenu={e => e.preventDefault()}/>
                     </div>
-                    <div className="info ml-2">
-                        <h4>How & Why We Read</h4>
-                        <p><strong>- CrashCourse</strong></p>
-                        <div className="match d-flex justify-content-between align-items-center">
-                            <h3>36.4%</h3>
-                            <p>match</p>
+                    <div className="col pl-0">
+                        <a href="#" className="title">How & Why We Read</a>
+                        <p>- CrashCourse</p>
+                        <div className="match">
+                            <h3>36.4% <span>match</span></h3>
                         </div>
-
                     </div>
                 </div>
             </div>

@@ -28,7 +28,8 @@ function App() {
                   </Route>
 
                   <Route exact path="/prolearn">
-                      <Home />
+                      {/* <Home /> */}
+                      <TaskListContainer />
                   </Route>
 
                 </Switch>

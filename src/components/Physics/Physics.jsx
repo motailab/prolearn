@@ -80,10 +80,10 @@ export default function Physics({subject, ...rest}) {
 
 
     return (
-        <div className="physics">
+        <div className="physics px-3">
             {redirect && <Redirect to="/" />}
-            <h4>Physics</h4>
-            <div className="question-area" style={{height: "100vh", display: "flex"}}>
+            <h4 className="title mb-3">Physics</h4>
+            <div className="question-area" style={{height: "85vh", display: "flex"}}>
                 <CustomScroll heightRelativeToParent="100%">
                     {/** question and guess component**/}
                     {subject && subject.questions && subject.questions.map(item => (
@@ -91,7 +91,7 @@ export default function Physics({subject, ...rest}) {
                     ))}
                     {/**submit button */}
                     <div className="form-group text-center">
-                        <button className="btn btn-primary" onClick={handleSubmit} type="button" disabled={ready}>Submit</button>
+                        <button className="btn btn-info pl-5 pr-5" onClick={handleSubmit} type="button" disabled={ready}>Submit</button>
                     </div>
                 </CustomScroll>
             </div>
