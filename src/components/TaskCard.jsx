@@ -15,24 +15,26 @@ export default function TaskCard({title, duration, description, ...rest}) {
     }, [state, title]);
 
     return (
-        <div className={rest.column ? rest.column : 'col-md-4'}>
-            <NavLink to={'/subject/'+ title} activeClassName='activeRoute'>
-                <div class="taskbox">
-                    <div className="header">
-                        <h2>{title ? title : 'History'} <span className="status"></span> </h2>
-                        <p><strong>Estimated Time: {duration ? duration : '2 hours'}</strong></p>
-                    </div>
-                    <div className="content">
-                        {description ? description : 'Questions about Modern World History will help you to understand even deeper about history.'}
-                    </div>
-                    <div className={result.done && result.pass ? 'done' : 'd-none'}>
-                        <span className="text">Done !</span>
-                    </div>
-                    <div className={result.done === true && result.pass === false ? 'fail' : 'd-none'}>
-                        <span className="text">Opps.. Try again !</span>
-                    </div>
-                </div>
-            </NavLink>
+        // <div className={rest.column ? rest.column : 'col-md-4'}>
+
+        // </div>
+
+        <NavLink to={'/subject/'+ title} activeClassName='activeRoute'>
+        <div className="taskbox">
+            <div className="header">
+                <h2>{title ? title : 'History'} <span className="status"></span> </h2>
+                <p><strong>Estimated Time: {duration ? duration : '2 hours'}</strong></p>
+            </div>
+            <div className="content">
+                {description ? description : 'Questions about Modern World History will help you to understand even deeper about history.'}
+            </div>
+            <div className={result.done && result.pass ? 'done' : 'd-none'}>
+                <span className="text">Done !</span>
+            </div>
+            <div className={result.done === true && result.pass === false ? 'fail' : 'd-none'}>
+                <span className="text">Opps.. Try again !</span>
+            </div>
         </div>
+    </NavLink>
     );
 };

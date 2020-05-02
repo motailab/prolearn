@@ -27,21 +27,21 @@ function Header() {
                     <i className="fas fa-search"></i>
                     </div>
                     <input type="text" className="form-control search" placeholder="Search for an Account"/>
-                    <div className="input-group-prepend border-left">
+                    {/* <div className="input-group-prepend border-left">
                     <i className="far fa-clock"></i>
                     </div>
                     <div className="input-group-prepend border-left">
-                    <div className={`btn-group ${dropdownOpen ? 'show' : ''}`} onClick={() => setDropDownOpen(!dropdownOpen)} ref={dropDownRef}>
-                        <span className="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img src={flag} alt=""/>
-                        </span>
-                        <div className={`dropdown-menu flag-container ${dropdownOpen ? 'show' : ''}`}>
-                        <a className="dropdown-item" href="#"><img src={flag} alt=""/></a>
-                        <a className="dropdown-item" href="#"><img src={flag} alt=""/></a>
-                        <a className="dropdown-item" href="#"><img src={flag} alt=""/></a>
+                        <div className={`btn-group ${dropdownOpen ? 'show' : ''}`} onClick={() => setDropDownOpen(!dropdownOpen)} ref={dropDownRef}>
+                            <span className="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src={flag} alt=""/>
+                            </span>
+                            <div className={`dropdown-menu flag-container ${dropdownOpen ? 'show' : ''}`}>
+                            <a className="dropdown-item" href="#"><img src={flag} alt=""/></a>
+                            <a className="dropdown-item" href="#"><img src={flag} alt=""/></a>
+                            <a className="dropdown-item" href="#"><img src={flag} alt=""/></a>
+                            </div>
                         </div>
-                    </div>
-                    </div>
+                    </div> */}
                 </div>
             </form>
         </header>
