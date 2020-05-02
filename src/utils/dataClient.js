@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-axios.defaults.baseURL = 'http://localhost:3000';
+axios.defaults.baseURL = 'https://prolearn-fb6bb.firebaseio.com';
 
 export const getSubjects = () => {
-    return axios.get('/subjects').then(resp => resp.data);
+    return axios.get('/subjects.json').then(resp => resp.data);
 }

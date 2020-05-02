@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import logo from '../assets/images/logo.svg';
 
 function SideBar() {
@@ -21,10 +21,10 @@ function SideBar() {
                 </a>
             </li>
             <li>
-                <a href="#">
-                    <i className="fas fa-journal-whills"></i>
-                    <span>Supplementary class</span>
-                </a>
+                <NavLink to="/supplimentary" activeClassName="active">
+                    <i className="fas fa-tasks"></i>
+                    <span>Supplementary classNameess</span>
+                </NavLink>
             </li>
             <li>
                 <a href="#">

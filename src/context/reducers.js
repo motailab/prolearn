@@ -1,6 +1,6 @@
 export const  TYPES = {
     SUBJECT_DONE: 'SUBJECT_DONE',
-    LOAD_SUBJECT: 'LOAD_SUBJECT'
+    LOAD_SUBJECT: 'LOAD_SUBJECT',
 };
 
 

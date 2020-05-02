@@ -17,6 +17,9 @@ function App() {
                   <Route path="/subject/:name">
                     <SubjectContainer />
                   </Route>
+                  <Route path="/subject">
+                    <SubjectContainer />
+                  </Route>
                   <Route path='/'>
                     <TaskListContainer />
                   </Route>

@@ -517,6 +517,15 @@ header form .input-group-prepend .dropdown-item {
   margin-bottom: 0;
 }
 
+.test-history-progress .header .dropdown-menu {
+  position: absolute;
+  will-change: transform;
+  top: 0px;
+  left: 0px;
+  -webkit-transform: translate3d(20px, 21px, 0px);
+          transform: translate3d(20px, 21px, 0px);
+}
+
 .test-history-progress p {
   font-size: 12px;
   line-height: 14px;
@@ -783,6 +792,35 @@ header form .input-group-prepend .dropdown-item {
 .rcs-custom-scrollbar .rcs-inner-handle {
   background-color: #697787;
   color: #000;
+}
+
+/* video player */
+.player-container {
+  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15) !important;
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15) !important;
+  border-radius: 10px !important;
+  padding: 2.6% !important;
+}
+
+.match {
+  position: absolute;
+  bottom: 0;
+}
+
+.match h3 {
+  background: -webkit-gradient(linear, left top, right top, from(#D4145A), to(#FBB03B));
+  background: linear-gradient(to right, #D4145A 0%, #FBB03B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.match p {
+  /* margin-left: auto; */
+  font-size: 1em;
+  margin: 0;
+  margin-left: 1em;
 }
 
 .fail {
