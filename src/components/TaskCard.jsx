@@ -22,8 +22,8 @@ export default function TaskCard({title, duration, description, ...rest}) {
         <NavLink to={'/subject/'+ title} activeClassName='activeRoute'>
         <div className="taskbox">
             <div className="header">
-                <h2>{title ? title : 'History'} <span className="status"></span> </h2>
-                <p><strong>Estimated Time: {duration ? duration : '2 hours'}</strong></p>
+                <h4>{title ? title : 'History'} <span className="status"></span> </h4>
+                <p>Estimated Time: {duration ? duration : '2 hours'}</p>
             </div>
             <div className="content">
                 {description ? description : 'Questions about Modern World History will help you to understand even deeper about history.'}

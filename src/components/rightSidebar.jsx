@@ -25,6 +25,47 @@ export default function RightSidebar() {
                     </div>
                  </div>
              </div>
+
+            <div className="reward-wrap">
+                <h3 className="title">Rewards <a href="#" className="gray"> <i className="fas fa-caret-left"></i> See all </a></h3>
+                <div className="box reward active">
+                    <div className="media">
+                        <i className="fas fa-gift"></i>
+                        <div className="media-body">
+                            <h4>10 mins early release to recess <span className="status">NEW</span></h4>
+                        </div>
+                    </div>
+                </div>
+                {/* ennd reward */}
+                <div className="box reward">
+                    <div className="media">
+                        <i className="fas fa-gift"></i>
+                        <div className="media-body">
+                            <h4>Plus 2 marks for maths assessment</h4>
+                        </div>
+                    </div>
+                </div>
+                {/* ennd reward */}
+                <div className="box reward">
+                    <div className="media">
+                        <i className="fas fa-gift"></i>
+                        <div className="media-body">
+                            <h4>“Get out of Tuition” Card</h4>
+                        </div>
+                    </div>
+                </div>
+                {/* ennd reward */}
+                <div className="box reward">
+                    <div className="media">
+                        <i className="fas fa-gift"></i>
+                        <div className="media-body">
+                            <h4>Plus 1 mark for english assessment </h4>
+                        </div>
+                    </div>
+                </div>
+                {/* ennd reward */}
+
+            </div>
         </div>
     )
 }

@@ -5,12 +5,16 @@ import CustomButton from '../CustomButton/CustomButton'
 
 export default function Question({title, question, ...props}) {
     const activeQs = props.activeQs;
-    title = question.hasImage ? (<p>{title.split('--')[0]}<br/> <img src={diagram} alt=''/> <br/>{title.split('--')[1]}</p>) : <p>{title}</p>;
+    title = question.hasImage ? (<p className="mb-0">{title.split('--')[0]}<br/><br/> <img src={diagram} alt=''/> <br/><br/>{title.split('--')[1]}</p>) : <p className="mb-0">{title}</p>;
 
     return (
-        <div className={`card p-4 text-center m-4 shadow rounded question-container ${activeQs.has(question.id) !== false ? '' : 'not-active'}`}>
+        <div className={`box text-center question-container ${activeQs.has(question.id) !== false ? '' : 'not-active'}`}>
 
-            {title}
+           <div className="row">
+               <div className="col-md-8 offset-md-2">
+                    {title}
+               </div>
+           </div>
 
             <div className="select-area d-flex justify-content-center">
                 {question.guesses && question.guesses.map((item) => (

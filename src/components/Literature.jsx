@@ -54,14 +54,15 @@ export default function Literature({subject}) {
     return (
         <div className='literature p-4'>
             {redirect ? <Redirect to="/" /> : null}
-            <h3>question</h3>
+            <h4 className="title">Literature</h4>
             <form onSubmit={handleFormSubmit}>
                 <div className="form-group">
-                    <textarea style={{width: '100%', height: '400px'}} className="form-control rounded" name='answer' onChange={handleChange} value={answer}></textarea>
-                    {error && <div className='alert alert-danger mt-2'>{error}</div>}
+                    <textarea style={{width: '100%', fontSize:'12px', height: '400px'}} className="form-control rounded" name='answer' onChange={handleChange} value={answer} placeholder="Harper Lee’s was an American novelist widely known for To Kill a Mockingbird, published in 1960. Immediately
+successful" ></textarea>
+                    {error && <div className='alert alert-danger mt-2' style={{fontSize:'12px'}}>{error}</div>}
                 </div>
-                <div className="form-group">
-                    <button className="btn btn-primary btn-sm" onClick={handleFormSubmit}>Submit</button>
+                <div className="form-group text-right">
+                    <button className="btn btn-info pl-5 pr-5" onClick={handleFormSubmit}>Submit</button>
                 </div>
             </form>
         </div>

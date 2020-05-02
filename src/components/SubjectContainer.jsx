@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
+import CustomScroll from 'react-custom-scroll';
 import { useParams } from 'react-router-dom';
 import { AppContext } from '../context/context';
 import TaskCard from './TaskCard';
@@ -15,13 +16,27 @@ export default function SubjectContainer(params) {
     }, [subjects, name]);
 
     return (
-        <div className="row">
-            <div className="col-md-4">
-                {subjects.map(item => (<TaskCard {...item}  column='col-md-12' key={item.id} />))}
+        <div className="taskListContainer px-4">
+            <div className="row">
+                <div className="col-md-4 overViweWrap">
+                    <div className="scroll_area" style={{height:"85vh"}}>
+                        <CustomScroll heightRelativeToParent="100%">
+                            <a href="#" className="overview"> <i className="fas fa-caret-left"></i> OverView</a>
+                            <h1 className="title">Todays Task</h1>
+                            <div className="row">
+                                    {subjects.map(item => (
+                                        <div className="col-lg-12">
+                                            <TaskCard {...item} key={item.id} />
+                                        </div>
+                                    ))}
+                            </div>
+                        </CustomScroll>
+                    </div>
+                </div>
+                <div className="col-md-8">
+                    {selectedSubject ? <Component name={name.toLowerCase()} subject={selectedSubject} /> : <h3 className="mt-5 pt-5 text-center">Component not ready</h3>}
+                </div>
             </div>
-            <div className="col-md-8">
-                {selectedSubject ? <Component name={name.toLowerCase()} subject={selectedSubject} /> : <h3>Component not ready</h3>}
-            </div>
-        </div>
+        </div>  
     )
 };

@@ -25,74 +25,10 @@ export default function TaskListContainer(params) {
     return (
         <div className="taskListContainer px-4">
             <div className="row">
-                <div className="col-lg-8 col-md-6 overViweWrap">
-                    <a href="#" className="overview"> <i className="fas fa-caret-left"></i> OverView</a>
-                    <h1 className="title">Todays Task</h1>
+                <div className="col-lg-8 col-md-6 overViweWrap overview_footer_paddiing">
                     <CustomScroll heightRelativeToParent="100%">
-                        <div className="row">
-                            <div className="col-lg-6">
-                                <div className="test-history-progress">
-                                    <div className="header d-flex">
-                                        <span className="title mr-auto">English</span>
-                                        <div className="input-group-prepend">
-                                            <span data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i className="fas fa-ellipsis-v"></i></span>
-                                            <div className="dropdown-menu" x-placement="bottom-start">
-                                                <a className="dropdown-item" href="#"> Edit</a>
-                                                <a className="dropdown-item" href="#"> Delate</a>
-                                                <a className="dropdown-item" href="#"> Report</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <p>Class 040A </p>
-                                    <p>Secondary 4 </p>
-                                    <div className="content">
-                                        <div className="progress_wrap">
-                                            <div className="progress-active" style={{width:"25%"}}></div>
-                                            <div className="mark_row">
-                                            <span className="mark active"></span>
-                                            <span className="mark active"></span>
-                                            <span className="mark"></span>
-                                            <span className="mark"></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="footer text-right">
-                                        Previous Test Score <strong>72/100</strong>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-6">
-                                <div className="test-history-progress">
-                                    <div className="header d-flex">
-                                        <span className="title mr-auto">English</span>
-                                        <div className="input-group-prepend">
-                                            <span data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i className="fas fa-ellipsis-v"></i></span>
-                                            <div className="dropdown-menu" x-placement="bottom-start">
-                                                <a className="dropdown-item" href="#"> Edit</a>
-                                                <a className="dropdown-item" href="#"> Delate</a>
-                                                <a className="dropdown-item" href="#"> Report</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <p>Class 040A </p>
-                                    <p>Secondary 4 </p>
-                                    <div className="content">
-                                        <div className="progress_wrap">
-                                            <div className="progress-active" style={{width:"25%"}}></div>
-                                            <div className="mark_row">
-                                            <span className="mark active"></span>
-                                            <span className="mark active"></span>
-                                            <span className="mark"></span>
-                                            <span className="mark"></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="footer text-right">
-                                        Previous Test Score <strong>72/100</strong>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <a href="#" className="overview"> <i className="fas fa-caret-left"></i> OverView</a>
+                        <h1 className="title">Todays Task</h1>
                         <div className="row">
                                 {subject_list.map(item => (
                                     <div className="col-lg-6">
@@ -100,7 +36,7 @@ export default function TaskListContainer(params) {
                                     </div>
                                 ))}
                         </div>
-                        <h4>Recomended Tasks</h4>
+                        <h4 className="title mb-3 mt-3">Recomended Tasks</h4>
                         <div className="row">
                             {
                                 showSpinner ?
@@ -115,6 +51,24 @@ export default function TaskListContainer(params) {
                             }
                         </div>
                     </CustomScroll>
+                    <div className="over_viwe_footer">
+                        <div className="row">
+                            <div className="col-auto">
+                                <h4 className="title mb-3">Progress</h4>
+                                <div className="box">
+                                    <div class="progress">
+                                        <div className="text">60 %</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col">
+                                <h4 className="title mb-3">Quote Of The Day</h4>
+                                <div className="box quote">
+                                   <h3>“There are no shortcuts to any place worth going.”</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div className="col-lg-4 col-md-6">
                    <RightSidebar/>
