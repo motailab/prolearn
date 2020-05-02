@@ -522,8 +522,12 @@ header form .input-group-prepend .dropdown-item {
   will-change: transform;
   top: 0px;
   left: 0px;
-  -webkit-transform: translate3d(20px, 21px, 0px);
-          transform: translate3d(20px, 21px, 0px);
+  transform: translate3d(-95px, 21px, 0px);
+  transition: all .5s;
+}
+
+.test-history-progress .header .dropdown-menu.show {
+  transition: all .5s;
 }
 
 .test-history-progress p {
@@ -913,4 +917,24 @@ header form .input-group-prepend .dropdown-item {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+
+.circle-label {
+  transform: translateY(0.25em);
+}
+
+.circle-percentage {
+  font-size: 0.6em;
+  line-height: 1;
+  text-anchor: middle;
+  transform: translateY(-0.25em);
+}
+
+.circle-text {
+  font-size: 0.2em;
+  text-transform: uppercase;
+  text-anchor: middle;
+  transform: translateY(0.7em);
+}
+
 /*# sourceMappingURL=style.css.map */

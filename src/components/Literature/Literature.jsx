@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { Redirect } from 'react-router-dom';
-import { AppContext } from '../context/context';
-import { TYPES } from '../context/reducers';
+import { AppContext } from '../../context/context';
+import { TYPES } from '../../context/reducers';
 
 export default function Literature({subject}) {
     const [answer, setAnswer] = useState('');

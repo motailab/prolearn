@@ -1,5 +1,5 @@
 import React from 'react';
-import Literature from '../components/Literature';
+import Literature from '../components/Literature/Literature';
 import Physics from '../components/Physics/Physics';
 import NotFound from '../components/NotFound';
 
