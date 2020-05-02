@@ -1,0 +1,27 @@
+<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<rect width="10" height="10" fill="#E5E5E5"/>
+<rect x="-1449" y="-1038" width="2992" height="1835" fill="white"/>
+<g filter="url(#filter0_d)">
+<rect x="-108" y="-74" width="311" height="131" rx="4" fill="white"/>
+</g>
+<rect x="-81" y="4" width="86" height="2" fill="#387EE9"/>
+<rect x="5" y="4" width="86" height="2" fill="#DEE5ED"/>
+<rect x="5" y="4" width="47" height="2" fill="#387EE9"/>
+<circle cx="5" cy="5" r="5" fill="#387EE9"/>
+<rect x="2" y="2" width="6" height="6" fill="url(#pattern0)"/>
+<defs>
+<filter id="filter0_d" x="-118" y="-79" width="331" height="151" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+<feOffset dy="5"/>
+<feGaussianBlur stdDeviation="5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+</filter>
+<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0" transform="scale(0.0104167)"/>
+</pattern>
+<image id="image0" width="96" height="96" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAABmJLR0QA/wD/AP+gvaeTAAABWElEQVR4nO3awW3CQBRFUdeULEhpLLNMs4no4GVBkBCCgO0Zf8ScU8HMfUaWLKYJAAAAAAAAAOAZJdkl2VefY0hJ3pP85Oir+jxDuYgfI2zoRnwjbOFOfCP09PfCPdyJf+LF3NKDT/7JIcmu+swvQ/xC4hcSv5D4hcQvJH4h8QuJX0j8QuIXEr+Q+IXELyR+IfELiV9I/ELiFxK/kPiFhoyfZP8MF8m8v468TPzPswt9FJ5jyCf/88rFNh9B/MIRxC8cYdT4+2e4cEZ84U7TNCV5S/I94+LNfwkZ8ck/VznC8PFPKkYQ/8KWI4h/wxYjiH9HzxHEf1CPEcSfqeUI4i/UYgTxV1ozgviNLBlB/MYy/3vNeN92esu8X4L4PTQcQfylGowg/lorRhC/lQUjiN/ajBHE7+WBEcTv7Z8RxN/KlRHE39rZCOJXyfGzhfgAAAAAAADwMn4BogdhP6enmHEAAAAASUVORK5CYII="/>
+</defs>
+</svg>
