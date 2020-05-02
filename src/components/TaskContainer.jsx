@@ -5,14 +5,14 @@ import { AppContext } from '../context/context';
 import TaskCard from './TaskCard';
 import Component from '../utils/Components';
 
-export default function SubjectContainer(params) {
-    const [selectedSubject, setSelectedSubject] = useState(undefined);
+export default function TaskContainer(params) {
+    const [selectedTask, setSelectedTask] = useState(undefined);
     const {state:{subjects}} = useContext(AppContext);
     const { name } = useParams();
 
     useEffect(() => {
         let index = subjects.findIndex(item => item.title === name);
-        setSelectedSubject(prev => (index >= 0 ? subjects[index] : null));
+        setSelectedTask(prev => (index >= 0 ? subjects[index] : null));
     }, [subjects, name]);
 
     return (
@@ -24,7 +24,7 @@ export default function SubjectContainer(params) {
                             <a href="#" className="overview"> <i className="fas fa-caret-left"></i> OverView</a>
                             <h1 className="title">Todays Task</h1>
                             <div className="row">
-                                    {subjects.map(item => (
+                                    {subjects && subjects.map(item => (
                                         <div className="col-lg-12">
                                             <TaskCard {...item} key={item.id} />
                                         </div>
@@ -34,9 +34,11 @@ export default function SubjectContainer(params) {
                     </div>
                 </div>
                 <div className="col-md-8">
-                    {selectedSubject ? <Component name={name.toLowerCase()} subject={selectedSubject} /> : <h3 className="mt-5 pt-5 text-center">Component not ready</h3>}
+                    {selectedTask ? <Component name={name.toLowerCase()} subject={selectedTask} /> : <h3>Component not ready</h3>}
+                    {/* {selectedSubject ? <Component name={name.toLowerCase()} subject={selectedSubject} /> : <h3 className="mt-5 pt-5 text-center">Component not ready</h3>} */}
                 </div>
             </div>
         </div>  
+
     )
 };

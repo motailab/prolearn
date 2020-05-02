@@ -858,7 +858,7 @@ header form .input-group-prepend .dropdown-item {
 }
 
 .overViweWrap {
-  min-height: 88vh;
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -874,7 +874,7 @@ header form .input-group-prepend .dropdown-item {
 
 .overview_footer_paddiing {
   padding-bottom: 170px;
-  height: 88vh;
+  height: 100vh;
 }
 
 .overview_footer_paddiing .over_viwe_footer {

@@ -86,8 +86,8 @@ export default function Physics({subject, ...rest}) {
             <div className="question-area" style={{height: "85vh", display: "flex"}}>
                 <CustomScroll heightRelativeToParent="100%">
                     {/** question and guess component**/}
-                    {subject && subject.questions.map(item => (
-                        <Question  handleChange={handleChange} title={item.question} key={item.id} question={item} activeQs={activeQs} />
+                    {subject && subject.questions && subject.questions.map(item => (
+                        <Question  handleChange={handleChange} title={item.question} key={item.title+'-'+item.id} question={item} activeQs={activeQs} />
                     ))}
                     {/**submit button */}
                     <div className="form-group text-center">

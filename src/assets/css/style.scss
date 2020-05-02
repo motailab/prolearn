@@ -836,7 +836,7 @@ header{
 }
 
 .overViweWrap{
-    min-height: 88vh;
+    min-height: 100vh;
     display: flex;
     position: relative;
     box-shadow: 10px 0 15px -5px rgba(0, 0, 0, 0.08);
@@ -848,7 +848,7 @@ header{
 
 .overview_footer_paddiing{
     padding-bottom: 170px;
-    height: 88vh;
+    height:100vh;
     .over_viwe_footer{
         background: #eef2f6;
         min-height: 100px;

@@ -4,7 +4,7 @@ import CustomScroll from 'react-custom-scroll';
 import { AppContext } from '../context/context';
 import TaskCard from './TaskCard'
 import RightSidebar from './rightSidebar';
-import RecomendedPlayer from './Recomended/RecomendedPlayer';
+import RecomendedPlayer from './RecomendedVideoPlayer/RecomendedPlayer';
 import Spinner from './Spinner/Spinner';
 
 export default function TaskListContainer(params) {
@@ -31,8 +31,8 @@ export default function TaskListContainer(params) {
                         <h1 className="title">Todays Task</h1>
                         <div className="row">
                                 {subject_list.map(item => (
-                                    <div className="col-lg-6">
-                                        <TaskCard {...item} key={item.id} />
+                                    <div className="col-lg-6" key={item.id}>
+                                        <TaskCard {...item}  />
                                     </div>
                                 ))}
                         </div>

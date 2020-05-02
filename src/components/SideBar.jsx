@@ -2,17 +2,23 @@ import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../assets/images/logo.svg';
 
-function SideBar() {
+function SideBar(props) {
+
+    const checkActive = (match, location) => {
+        if(!location) return false;
+        const {pathname} = location;
+        return pathname === "/";
+    }
 
     return (
         <div className="sidebar off-canvas-sidebar">
             <Link to='/' className="logo"><img src={logo} alt=""/></Link>
             <ul>
             <li>
-                <a className="active" href="#">
+                <NavLink to="/" activeClassName="active" isActive={checkActive}>
                     <i className="fas fa-user-tie"></i>
                     <span>Caroline </span>
-                </a>
+                </NavLink>
             </li>
             <li>
                 <a href="#">
@@ -21,7 +27,7 @@ function SideBar() {
                 </a>
             </li>
             <li>
-                <NavLink to="/supplimentary" activeClassName="active">
+                <NavLink to="/suplimentary" activeClassName="active">
                     <i className="fas fa-tasks"></i>
                     <span>Supplementary classNameess</span>
                 </NavLink>
