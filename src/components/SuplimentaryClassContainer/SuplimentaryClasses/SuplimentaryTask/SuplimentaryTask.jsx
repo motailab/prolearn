@@ -3,7 +3,7 @@ import { Link, useRouteMatch } from 'react-router-dom';
 import rewardIcon from '../../../../assets/images/reward.svg';
 
 
-export default function SuplimentaryTask(props) {
+export default function SuplimentaryTask({classData}) {
     const match = useRouteMatch();
 
     const generateStyle = (time) => {
@@ -15,9 +15,9 @@ export default function SuplimentaryTask(props) {
         
         let selectedColor = colors[0]
 
-        if (time === 30) {
+        if (time > 10 && time <= 30) {
             selectedColor = colors[1];
-        } else if (time === 60) {
+        } else if (time > 30) {
             selectedColor = colors[2];
         }
 
@@ -36,16 +36,14 @@ export default function SuplimentaryTask(props) {
 
     return (
         <div className="col-md-4">
-            <div className="card p-4 shadow rounded">
-                <Link to={match.url+'/subjects'}>
-                    <h5>Supplementary Class 1</h5>
-                    <h4 className="text-dark">Fractions</h4>
-                    <h1 style={{...generateStyle()}}>10mins</h1>
+            <div className="card p-4 shadow rounded h-75">
+                <Link to={match.url+'/'+classData.id}>
+                    <h5>{classData.title}</h5>
+                    <h4 className="text-dark">{classData.subject_type}</h4>
+                    <h1 style={{...generateStyle(classData.time)}}>{classData.time}{classData.prefix}</h1>
                     <p>
                         <strong className="d-block">description</strong>
-                        This supplementary Class will focus purely on
-                        Fractions. Doing 8 questions in 10 mins will
-                        allow you to familiarise yourself with fractions.
+                        {classData.description}
                     </p>
                 </Link>
             </div>
@@ -55,7 +53,7 @@ export default function SuplimentaryTask(props) {
                     <img src={rewardIcon} alt="reward" className="img-fluid"/> 
                     <div className="text ml-4">
                         <strong>Reward</strong>
-                        <p>Plus 2 marks for the next assessment</p>
+                        <p>{classData.reward.message}</p>
                     </div>
                 </div>
             </div>

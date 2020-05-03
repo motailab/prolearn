@@ -9,6 +9,9 @@ const initialState = {
     suplimentary: {
         loading: false,
         subjects: null,
+        classes: {
+            loading: false,
+        }
     }
 };
 

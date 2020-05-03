@@ -17,7 +17,6 @@ export default function SuplimentarySubject({score, ...props}) {
 
 
     useEffect(() => {
-        console.log(props);
         const body = document.querySelector('body');
         body.addEventListener('click', hideDropDown);
         return () => {
@@ -27,7 +26,10 @@ export default function SuplimentarySubject({score, ...props}) {
 
     return (
         <div className="col-lg-6">
-            <Link to={`${match.url}/${props.id}`}>
+            <Link to={{
+                pathname: `${match.url}/${props.id}`,
+                state: { subject_name: props.name }
+            }}>
                 <div className="test-history-progress">
                     <div className="header d-flex">
                         <span className="title mr-auto">{props.name}</span>
