@@ -1,12 +1,15 @@
 export const  TYPES = {
-    SUBJECT_DONE: 'SUBJECT_DONE',
-    LOAD_SUBJECT: 'LOAD_SUBJECT',
+    TASK_DONE: 'TASK_DONE',
+    TASK_LOADED: 'TASK_LOADED',
+    LOAD_SUPLIMENTARY_SUBJECT: 'LOAD_SUPLIMENTARY_SUBJECT',
+    SUPLIMENTARY_SUBJECT_LOADED: 'SUPLIMENTARY_SUBJECT_LOADED',
 };
 
 
 export const  reducers = (state={}, action) => {
     switch (action.type) {
-        case TYPES.SUBJECT_DONE:
+        
+        case TYPES.TASK_DONE:
             const index = state.completed_subject.findIndex(({name, id}) => action.payload.name === name);
             //completed subject exist or add to complete
             if(index >= 0) {
@@ -26,11 +29,31 @@ export const  reducers = (state={}, action) => {
                 completed_subject: [...completed_subject]
             };
         
-        case TYPES.LOAD_SUBJECT:
+        case TYPES.TASK_LOADED:
             return {
                 ...state,
                 subjects: [...action.payload]
             }
+
+        case TYPES.LOAD_SUPLIMENTARY_SUBJECT:
+            return {
+                ...state,
+                suplimentary: {
+                    ...state.suplimentary,
+                    loading: true,
+                    subjects: null
+                }
+            };
+
+        case TYPES.SUPLIMENTARY_SUBJECT_LOADED:
+            return {
+                ...state,
+                suplimentary: {
+                    ...state.suplimentary,
+                    loading: false,
+                    subjects: action.payload
+                }
+            };
         default:
             return state;
     }

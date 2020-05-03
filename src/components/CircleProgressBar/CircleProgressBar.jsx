@@ -1,11 +1,11 @@
 import React from 'react';
 
-const INITIAL_OFFSET = 25;
+const INITIAL_OFFSET = 50;
 const circleConfig = {
-  viewBox: '0 0 38 38',
-  x: '19',
-  y: '19',
-  radio: '15.91549430918954'
+  viewBox: '0 0 100 100',
+  x: '50',
+  y: '50',
+  radio: '40'
 };
 
 const CircleProgressBarBase = ({
@@ -25,7 +25,15 @@ const CircleProgressBarBase = ({
                 r={circleConfig.radio}
                 fill="transparent"
                 stroke={trailStrokeColor}
+                strokeWidth="7"
                 />
+                
+                <defs>
+                    <linearGradient id="linear" x1="269.22" y1="0%">
+                        <stop offset="-3.37%"   stopColor="#37A0F6"/>
+                        <stop offset="99.26%" stopColor="#387EE9"/>
+                    </linearGradient>
+                </defs>
 
                 <circle
                 className="path"
@@ -33,17 +41,18 @@ const CircleProgressBarBase = ({
                 cy={circleConfig.y}
                 r={circleConfig.radio}
                 fill="transparent"
-                stroke={strokeColor}
-                strokeDasharray={`${percentage} ${100 - percentage}`}
+                stroke="url(#linear)"
+                strokeDasharray="282"
                 strokeDashoffset={INITIAL_OFFSET}
+                strokeWidth="7"
                 />
                 <g className="circle-label">
-                <text x="50%" y="50%" className="circle-percentage">
+                <text x="50%" y="50%" className="circle-percentage" textAnchor="middle">
                     {percentage}%
                 </text>
-                <text x="50%" y="50%" className="circle-text">
+                {/* <text x="50%" y="50%" className="circle-text">
                     {innerText}
-                </text>
+                </text> */}
                 </g>
             </svg>
         </figure>

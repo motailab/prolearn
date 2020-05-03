@@ -50,7 +50,7 @@ export default function Physics({subject, ...rest}) {
         }
 
         dispatch({
-            type: TYPES.SUBJECT_DONE,
+            type: TYPES.TASK_DONE,
             payload: {
                 name: subject.title,
                 id: subject.id,
@@ -67,7 +67,7 @@ export default function Physics({subject, ...rest}) {
         //reset course state for redo
         if(item.length && item[0].done) {
             dispatch({
-                type: TYPES.SUBJECT_DONE,
+                type: TYPES.TASK_DONE,
                 payload: {
                     done: false,
                     name: subject.title,

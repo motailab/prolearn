@@ -2,10 +2,11 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import SideBar from "./components/SideBar";
 import TaskListContainer from "./components/TaskListContainer";
-import SuplimentaryClasses from './components/SuplimentaryClasses/SuplimentaryClasses';
+import SuplimentaryClassContainer from './components/SuplimentaryClassContainer/SuplimentaryClassContainer';
 import { AppProvider } from './context/context';
 import TaskContainer from "./components/TaskContainer";
 import Home from "./components/Home/Home";
+import SuplimentaryClasses from "./components/SuplimentaryClassContainer/SuplimentaryClasses/SuplimentaryClasses";
 
 function App() {
   return (
@@ -24,12 +25,13 @@ function App() {
                   </Route>
 
                   <Route  exact path="/suplimentary">
-                    <SuplimentaryClasses />
+                    <SuplimentaryClassContainer />
                   </Route>
-
+                  <Route exact path="/suplimentary/:id">
+                      <SuplimentaryClasses />
+                  </Route>
                   <Route exact path="/prolearn">
-                      {/* <Home /> */}
-                      <TaskListContainer />
+                      <Home />
                   </Route>
 
                 </Switch>

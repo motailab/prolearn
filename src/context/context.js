@@ -1,11 +1,15 @@
 import React, { createContext, useReducer, useEffect } from 'react';
 import{ reducers, TYPES }from './reducers';
-import { getSubjects } from '../utils/dataClient';
+import { fetchData } from '../utils/dataClient';
 
 //initial state
 const initialState = {
     completed_subject: [],
-    subjects: []
+    subjects: [],
+    suplimentary: {
+        loading: false,
+        subjects: null,
+    }
 };
 
 //context provider we will use for extract data from this
@@ -19,10 +23,10 @@ const AppProvider = ({ children }) => {
     const [state, dispatch] = useReducer(reducers, initialState);
 
     useEffect(() => {
-        getSubjects()
+        fetchData()
             .then(data => {
                 dispatch({
-                    type: TYPES.LOAD_SUBJECT,
+                    type: TYPES.TASK_LOADED,
                     payload: [...data]
                 });
             })

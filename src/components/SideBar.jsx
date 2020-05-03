@@ -12,7 +12,7 @@ function SideBar(props) {
 
     return (
         <div className="sidebar off-canvas-sidebar">
-            <NavLink to='/' className="logo"><img src={logo} alt=""/></NavLink>
+            <NavLink to='/prolearn' className="logo"><img src={logo} alt=""/></NavLink>
             <ul>
             <li>
                 <NavLink to="/" activeClassName="active" isActive={checkActive}>

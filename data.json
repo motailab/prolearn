@@ -76,5 +76,89 @@
             "subject": "History",
             "id": 3
         }
-    ]
+    ],
+    "suplimentary": {
+        "subjects":[
+            {
+                "name": "English",
+                "class": "Class 040A",
+                "grade": "Secondary 4",
+                "previous_score": 72,
+                "id": "eng-1"
+            },
+            {
+                "name": "Mathematics",
+                "class": "Class 042A",
+                "grade": "Secondary 4",
+                "previous_score": 79,
+                "id": "math-1"
+            },
+            {
+                "name": "Chemistry",
+                "class": "Class 038A",
+                "grade": "Secondary 4",
+                "previous_score": 65,
+                "id": "che-1"
+            },
+            {
+                "name": "Biology",
+                "class": "Class 039A",
+                "grade": "Secondary 4",
+                "previous_score": 82,
+                "id": "bio-1"
+            },
+            {
+                "name": "Physics",
+                "class": "Class 036B",
+                "grade": "Secondary 4",
+                "previous_score": 91,
+                "id": "phy-1"
+            },
+            {
+                "name": "Social Studies",
+                "class": "Class 067C",
+                "grade": "Secondary 4",
+                "previous_score": 53,
+                "id": "soci-1"
+            }
+        ],
+
+        "classes": {
+            "math-1":[
+                    {
+                        "title": "Supplementary Class 1",
+                        "subject_type": "Fractions",
+                        "id": "fraction",
+                        "time": 10,
+                        "prefix": "mins",
+                        "description": "This supplementary Class will focus \npurely on Fractions. Doing 8 questions in 10 mins will\nallow you to familiarise yourself with fractions.",
+                        "reward": {
+                            "message": "Plus 2 marks for the next assessment"
+                        }
+                    },
+                    {
+                        "title": "Supplementary Class 2",
+                        "subject_type": "Simultaneous Equation",
+                        "id": "graph",
+                        "time": 30,
+                        "prefix": "mins",
+                        "description": "This supplementary class will allow you to\nhave a deeper understanding of\nsimultaneous equation.",
+                        "reward": {
+                            "message": "10 mins early release to recess"
+                        }
+                    },
+                    {
+                        "title": "Supplementary Class 3",
+                        "subject_type": "Graph",
+                        "id": "sm-equation",
+                        "time": 60,
+                        "prefix": "mins",
+                        "description": "This supplementary class will help you practice\nyour graph drawing.",
+                        "reward": {
+                            "message": "“Get out of Tuition” Card"
+                        }
+                    }
+            ]
+        }
+    }
 }

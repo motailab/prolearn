@@ -25,8 +25,8 @@ export default function TaskContainer(params) {
                             <h1 className="title">Todays Task</h1>
                             <div className="row">
                                     {subjects && subjects.map(item => (
-                                        <div className="col-lg-12">
-                                            <TaskCard {...item} key={item.id} />
+                                        <div className="col-lg-12" key={item.id}>
+                                            <TaskCard {...item} />
                                         </div>
                                     ))}
                             </div>

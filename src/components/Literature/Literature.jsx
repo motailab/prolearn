@@ -18,7 +18,7 @@ export default function Literature({subject}) {
         }
 
         dispatch({
-            type: TYPES.SUBJECT_DONE,
+            type: TYPES.TASK_DONE,
             payload: {
                 done: true,
                 name: subject.title,
@@ -40,7 +40,7 @@ export default function Literature({subject}) {
 
         if(item.length && item[0].done) {
             dispatch({
-                type: TYPES.SUBJECT_DONE,
+                type: TYPES.TASK_DONE,
                 payload: {
                     done: false,
                     name: subject.title,
@@ -57,7 +57,10 @@ export default function Literature({subject}) {
             <h4 className="title">Literature</h4>
             <form onSubmit={handleFormSubmit}>
                 <div className="form-group">
-                    <textarea style={{width: '100%', fontSize:'12px', height: '400px'}} className="form-control rounded" name='answer' onChange={handleChange} value={answer} placeholder="Harper Lee’s was an American novelist widely known for To Kill a Mockingbird, published in 1960. Immediately
+                    <textarea style={{width: '100%', fontSize:'12px', height: '400px'}} 
+                    className="form-control rounded" name='answer' onChange={handleChange} 
+                    value={answer} 
+                    placeholder="Harper Lee’s was an American novelist widely known for To Kill a Mockingbird, published in 1960. Immediately
 successful" ></textarea>
                     {error && <div className='alert alert-danger mt-2' style={{fontSize:'12px'}}>{error}</div>}
                 </div>

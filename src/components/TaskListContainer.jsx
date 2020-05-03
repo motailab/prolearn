@@ -3,9 +3,10 @@ import React, { useState, useEffect, useContext } from 'react';
 import CustomScroll from 'react-custom-scroll';
 import { AppContext } from '../context/context';
 import TaskCard from './TaskCard'
-import RightSidebar from './rightSidebar';
+import RightSidebar from './RightSidebar';
 import RecomendedPlayer from './RecomendedVideoPlayer/RecomendedPlayer';
 import Spinner from './Spinner/Spinner';
+import CircleProgressBar from './CircleProgressBar/CircleProgressBar';
 
 export default function TaskListContainer(params) {
     const [subject_list, setSubjectList] = useState([]);
@@ -53,12 +54,18 @@ export default function TaskListContainer(params) {
                     </CustomScroll>
                     <div className="over_viwe_footer">
                         <div className="row">
-                            <div className="col-auto">
+                            <div className="col-2">
                                 <h4 className="title mb-3">Progress</h4>
                                 <div className="box">
-                                    <div class="progress">
+                                    {/* <div class="progress">
                                         <div className="text">60 %</div>
-                                    </div>
+                                    </div> */}
+                                    <CircleProgressBar 
+                                        trailStrokeColor="#C4C4C4"
+                                        strokeColor="#37A0F6"
+                                        percentage={75}
+                                        innerText="complete"
+                                    />
                                 </div>
                             </div>
                             <div className="col">
