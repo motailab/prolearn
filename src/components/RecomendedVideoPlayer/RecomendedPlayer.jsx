@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactPlayer from 'react-player';
 
-export default function RecomendedPlayer(props) {
+export default function RecomendedPlayer({ url }) {
 
     return (
         <div className="col-md-6">
@@ -9,10 +9,10 @@ export default function RecomendedPlayer(props) {
                 <div className="row">
                     <div className='col-7'>
                         <ReactPlayer 
-                        url="https://media.w3.org/2010/05/sintel/trailer_hd.mp4" 
+                        url={url} 
                         width="100%" height="100%" 
                         controls
-                        config={{ file: { attributes: { controlsList: 'nodownload' } } }}
+                        config={{ file: { attributes: { controlsList: 'nodownload', preload: 'none'  } } }}
                         onContextMenu={e => e.preventDefault()}/>
                     </div>
                     <div className="col pl-0">

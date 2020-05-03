@@ -44,8 +44,8 @@ export default function TaskListContainer(params) {
                                 :
                                 (
                                     <>
-                                      <RecomendedPlayer />
-                                      <RecomendedPlayer />
+                                      <RecomendedPlayer url="http://media.w3.org/2010/05/bunny/movie.mp4" />
+                                      <RecomendedPlayer url="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"/>
                                     </>
                                  )
                             }
