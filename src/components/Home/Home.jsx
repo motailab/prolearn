@@ -19,6 +19,7 @@ export default function Home(props) {
              strokeColor="teal"
              percentage={75}
              innerText="complete"
+
             />
         </div>
     );

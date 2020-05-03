@@ -25,10 +25,10 @@ export default function TaskListContainer(params) {
     return (
         <div className="taskListContainer px-4">
             <div className="row">
-                <div className="col-lg-8 col-md-6 overViweWrap">
-                    <a href="#" className="overview"> <i className="fas fa-caret-left"></i> OverView</a>
-                    <h1 className="title">Todays Task</h1>
+                <div className="col-lg-8 col-md-6 overViweWrap overview_footer_paddiing">
                     <CustomScroll heightRelativeToParent="100%">
+                        <a href="#" className="overview"> <i className="fas fa-caret-left"></i> OverView</a>
+                        <h1 className="title">Todays Task</h1>
                         <div className="row">
                                 {subject_list.map(item => (
                                     <div className="col-lg-6" key={item.id}>
@@ -36,7 +36,7 @@ export default function TaskListContainer(params) {
                                     </div>
                                 ))}
                         </div>
-                        <h4>Recomended Tasks</h4>
+                        <h4 className="title mb-3 mt-3">Recomended Tasks</h4>
                         <div className="row">
                             {
                                 showSpinner ?
@@ -44,13 +44,31 @@ export default function TaskListContainer(params) {
                                 :
                                 (
                                     <>
-                                      <RecomendedPlayer />
-                                      <RecomendedPlayer />
+                                      <RecomendedPlayer url="http://media.w3.org/2010/05/bunny/movie.mp4" />
+                                      <RecomendedPlayer url="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"/>
                                     </>
                                  )
                             }
                         </div>
                     </CustomScroll>
+                    <div className="over_viwe_footer">
+                        <div className="row">
+                            <div className="col-auto">
+                                <h4 className="title mb-3">Progress</h4>
+                                <div className="box">
+                                    <div class="progress">
+                                        <div className="text">60 %</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col">
+                                <h4 className="title mb-3">Quote Of The Day</h4>
+                                <div className="box quote">
+                                   <h3>“There are no shortcuts to any place worth going.”</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div className="col-lg-4 col-md-6">
                    <RightSidebar/>

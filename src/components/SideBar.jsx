@@ -12,7 +12,7 @@ function SideBar(props) {
 
     return (
         <div className="sidebar off-canvas-sidebar">
-            <Link to='/' className="logo"><img src={logo} alt=""/></Link>
+            <NavLink to='/' className="logo"><img src={logo} alt=""/></NavLink>
             <ul>
             <li>
                 <NavLink to="/" activeClassName="active" isActive={checkActive}>
@@ -21,10 +21,10 @@ function SideBar(props) {
                 </NavLink>
             </li>
             <li>
-                <a href="#">
+                <NavLink to="/lession">
                     <i className="fas fa-book"></i>
                     <span>Lesson Plan</span>
-                </a>
+                </NavLink>
             </li>
             <li>
                 <NavLink to="/suplimentary" activeClassName="active">
@@ -33,10 +33,10 @@ function SideBar(props) {
                 </NavLink>
             </li>
             <li>
-                <a href="#">
+                <NavLink to="/setting">
                     <i className="fas fa-cog"></i>
                     <span>Manage</span>
-                </a>
+                </NavLink>
             </li>
             </ul>
         </div>
