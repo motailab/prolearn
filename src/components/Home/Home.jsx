@@ -9,9 +9,11 @@ export default function Home(props) {
         const name = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
         return name[date.getDay()];
     }
+    
     return (
         <div className="home">
             <Calender defaultView="day" calendarType="US" showNavigation={false} formatShortWeekday={(locale, date) => formatDate(locale, date)}/>
+
             <CircleProgressBar 
              trailStrokeColor="gray"
              strokeColor="teal"
