@@ -1,4 +1,5 @@
 import React, { useEffect, useContext } from 'react';
+import { useLocation, useHistory } from 'react-router-dom';
 import CustomScroll from 'react-custom-scroll';
 
 import { AppContext } from '../../context/context';
@@ -11,10 +12,15 @@ import RightSidebar from '../RightSidebar';
 
 
 export default function SuplimentaryClassContainer(props) {
-
+    const location = useLocation();
+    const history = useHistory();
     const {state:{suplimentary: {subjects, loading}}, dispatch} = useContext(AppContext);
 
     useEffect(() => {
+       
+        if(location.state && location.state.goForward) {
+            history.replace(location.state.goForward);
+        }
 
         if(!subjects) {
             fetchData('/suplimentary.json')

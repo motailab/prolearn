@@ -10,6 +10,7 @@ export default function SuplimentaryClasses(props) {
     const {state: { suplimentary: { classes }}, dispatch} = useContext(AppContext);
     const params = useParams();
     const history = useHistory();
+
     const goBack = () => history.goBack();
     const { subject_name } = history.location.state;
 

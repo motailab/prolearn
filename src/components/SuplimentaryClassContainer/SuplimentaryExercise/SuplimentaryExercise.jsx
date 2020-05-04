@@ -26,7 +26,7 @@ export default function SuplimentaryExercise(props) {
     }
 
     const redo = () => {
-        window.location.reload();
+        history.replace('/suplimentary', {'goForward': match.url});
     }
 
     const takeAnotherLession = () => {
@@ -89,7 +89,7 @@ export default function SuplimentaryExercise(props) {
                     </CustomScroll>
                 </div>
                 <div className="col-md-4">
-                    <Timer duration={1/3} onFinish={onTimeOut}/>
+                    <Timer duration={getExcercies() ? getExcercies().duration : 0} onFinish={onTimeOut}/>
                     <RightSidebar />
                 </div>
             </div>
