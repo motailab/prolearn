@@ -125,40 +125,86 @@
 
         "classes": {
             "math-1":[
-                    {
-                        "title": "Supplementary Class 1",
-                        "subject_type": "Fractions",
-                        "id": "fraction",
-                        "time": 10,
-                        "prefix": "mins",
-                        "description": "This supplementary Class will focus \npurely on Fractions. Doing 8 questions in 10 mins will\nallow you to familiarise yourself with fractions.",
-                        "reward": {
-                            "message": "Plus 2 marks for the next assessment"
-                        }
-                    },
-                    {
-                        "title": "Supplementary Class 2",
-                        "subject_type": "Simultaneous Equation",
-                        "id": "graph",
-                        "time": 30,
-                        "prefix": "mins",
-                        "description": "This supplementary class will allow you to\nhave a deeper understanding of\nsimultaneous equation.",
-                        "reward": {
-                            "message": "10 mins early release to recess"
-                        }
-                    },
-                    {
-                        "title": "Supplementary Class 3",
-                        "subject_type": "Graph",
-                        "id": "sm-equation",
-                        "time": 60,
-                        "prefix": "mins",
-                        "description": "This supplementary class will help you practice\nyour graph drawing.",
-                        "reward": {
-                            "message": "“Get out of Tuition” Card"
-                        }
+                {
+                    "title": "Supplementary Class 1",
+                    "subject_type": "Fractions",
+                    "id": "fraction",
+                    "time": 10,
+                    "prefix": "mins",
+                    "description": "This supplementary Class will focus \npurely on Fractions. Doing 8 questions in 10 mins will\nallow you to familiarise yourself with fractions.",
+                    "reward": {
+                        "message": "Plus 2 marks for the next assessment"
                     }
-            ]
+                },
+                {
+                    "title": "Supplementary Class 2",
+                    "subject_type": "Simultaneous Equation",
+                    "id": "graph",
+                    "time": 30,
+                    "prefix": "mins",
+                    "description": "This supplementary class will allow you to\nhave a deeper understanding of\nsimultaneous equation.",
+                    "reward": {
+                        "message": "10 mins early release to recess"
+                    }
+                },
+                {
+                    "title": "Supplementary Class 3",
+                    "subject_type": "Graph",
+                    "id": "sm-equation",
+                    "time": 60,
+                    "prefix": "mins",
+                    "description": "This supplementary class will help you practice\nyour graph drawing.",
+                    "reward": {
+                        "message": "“Get out of Tuition” Card"
+                    }
+                }
+            ],
+
+            "excercies": {
+                "fraction": {
+                    "duration": 10,
+                    "subject_type": "Fractions",
+                    "title": "Supplementary Class 1",
+                    "questions": [
+                        {
+                            "question": "\\(1 \\above{1pt} 4\\) + \\(2 \\above{1pt} 5\\)",
+                            "guesses": [
+                                {"text": "\\(13 \\above{1pt} 20\\)", "id": 1},
+                                {"text":  "\\(5 \\above{1pt} 10\\)", "id": 2},
+                                {"text":  "\\(13 \\above{1pt} 20\\)", "id": 3}
+                            ],
+                            "id": "frac-1"
+                        },
+                        {
+                            "question": "\\(4 \\above{1pt} 5\\) x \\(7 \\above{1pt} 10\\)",
+                            "guesses": [
+                                {"text": "\\(12 \\above{1pt} 15\\)", "id": 1},
+                                {"text": "\\(7 \\above{1pt} 15\\)", "id": 2},
+                                {"text": "\\(14 \\above{1pt} 25\\)", "id": 3}
+                            ],
+                            "id": "frac-2"
+                        },
+                        {
+                            "question": "\\(3 \\above{1pt} 5\\) x \\(1 \\above{1pt} 3\\)",
+                            "guesses": [
+                                {"text": "\\(13 \\above{1pt} 15\\)", "id": 1},
+                                {"text": "\\(1 \\above{1pt} 5\\)", "id": 2},
+                                {"text": "\\(10 \\above{1pt} 13\\)", "id": 3}
+                            ],
+                            "id": "frac-3"
+                        },
+                        {
+                            "question": "\\(2 \\above{1pt} 3\\) x \\(4 \\above{1pt} 5\\)",
+                            "guesses": [
+                                {"text": "\\(12 \\above{1pt} 15\\)", "id": 1},
+                                {"text": "\\(7 \\above{1pt} 15\\)", "id": 2},
+                                {"text": "\\(8 \\above{1pt} 15\\)", "id": 3}
+                            ],
+                            "id": "frac-4"
+                        }
+                    ]
+                }
+            }
         }
     }
 }

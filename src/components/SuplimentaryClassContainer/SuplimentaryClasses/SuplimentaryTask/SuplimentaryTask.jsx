@@ -3,7 +3,7 @@ import { Link, useRouteMatch } from 'react-router-dom';
 import rewardIcon from '../../../../assets/images/reward.svg';
 
 
-export default function SuplimentaryTask({classData}) {
+export default function SuplimentaryTask({taskInfo}) {
     const match = useRouteMatch();
 
     const generateStyle = (time) => {
@@ -37,13 +37,13 @@ export default function SuplimentaryTask({classData}) {
     return (
         <div className="col-md-4">
             <div className="card p-4 shadow rounded h-75">
-                <Link to={match.url+'/'+classData.id}>
-                    <h5>{classData.title}</h5>
-                    <h4 className="text-dark">{classData.subject_type}</h4>
-                    <h1 style={{...generateStyle(classData.time)}}>{classData.time}{classData.prefix}</h1>
+                <Link to={match.url+'/'+taskInfo.id}>
+                    <h5>{taskInfo.title}</h5>
+                    <h4 className="text-dark">{taskInfo.subject_type}</h4>
+                    <h1 style={{...generateStyle(taskInfo.time)}}>{taskInfo.time}{taskInfo.prefix}</h1>
                     <p>
                         <strong className="d-block">description</strong>
-                        {classData.description}
+                        {taskInfo.description}
                     </p>
                 </Link>
             </div>
@@ -53,7 +53,7 @@ export default function SuplimentaryTask({classData}) {
                     <img src={rewardIcon} alt="reward" className="img-fluid"/> 
                     <div className="text ml-4">
                         <strong>Reward</strong>
-                        <p>{classData.reward.message}</p>
+                        <p>{taskInfo.reward.message}</p>
                     </div>
                 </div>
             </div>

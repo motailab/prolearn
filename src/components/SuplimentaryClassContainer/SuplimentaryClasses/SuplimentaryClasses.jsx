@@ -54,7 +54,7 @@ export default function SuplimentaryClasses(props) {
                             classes.loading || hasData() === undefined ? <Spinner /> 
                             : hasData() ? 
                             hasData().map(item => (
-                                <SuplimentaryTask classData={item} key={item.id}/>
+                                <SuplimentaryTask taskInfo={item} key={item.id}/>
                             ))
                             : <div className="alert alert-warning text-center">Not Found Any Suplimentary class for this subject</div>
                         }

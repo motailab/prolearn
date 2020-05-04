@@ -7,6 +7,7 @@ import { AppProvider } from './context/context';
 import TaskContainer from "./components/TaskContainer";
 import Home from "./components/Home/Home";
 import SuplimentaryClasses from "./components/SuplimentaryClassContainer/SuplimentaryClasses/SuplimentaryClasses";
+import SuplimentaryExercise from "./components/SuplimentaryClassContainer/SuplimentaryExercise/SuplimentaryExercise";
 
 function App() {
   return (
@@ -27,9 +28,15 @@ function App() {
                   <Route  exact path="/suplimentary">
                     <SuplimentaryClassContainer />
                   </Route>
+
                   <Route exact path="/suplimentary/:id">
                       <SuplimentaryClasses />
                   </Route>
+
+                  <Route exact path="/suplimentary/:subjectId/:classId">
+                      <SuplimentaryExercise />
+                  </Route>
+
                   <Route exact path="/prolearn">
                       <Home />
                   </Route>

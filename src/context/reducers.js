@@ -4,7 +4,9 @@ export const  TYPES = {
     LOAD_SUPLIMENTARY_SUBJECT: 'LOAD_SUPLIMENTARY_SUBJECT',
     SUPLIMENTARY_SUBJECT_LOADED: 'SUPLIMENTARY_SUBJECT_LOADED',
     LOADING_SUPLIMENTARY_CLASS: 'LOADING_SUPLIMENTARY_CLASS',
-    SUPLIMENTARY_CLASS_LOADED: 'SUPLIMENTARY_CLASS_LOADED'
+    SUPLIMENTARY_CLASS_LOADED: 'SUPLIMENTARY_CLASS_LOADED',
+    LOADING_SUPLIMENTARY_EXCERCIES: 'LOADING_SUPLIMENTARY_EXCERCIES',
+    SUPLIMENTARY_EXCERCIES_LOADED: 'SUPLIMENTARY_EXCERCIES_LOADED'
 };
 
 
@@ -78,6 +80,37 @@ export const  reducers = (state={}, action) => {
                         ...state.suplimentary.classes,
                         ...action.payload,
                         loading: false
+                    }
+                }
+            }
+
+        case TYPES.LOADING_SUPLIMENTARY_EXCERCIES:
+            return {
+                ...state,
+                suplimentary: {
+                    ...state.suplimentary,
+                    classes: {
+                        ...state.suplimentary.classes,
+                        excercies: {
+                            ...state.suplimentary.classes.excercies,
+                            loading: true
+                        }
+                    }
+                }
+            };
+        
+        case TYPES.SUPLIMENTARY_EXCERCIES_LOADED:
+            return {
+                ...state,
+                suplimentary: {
+                    ...state.suplimentary,
+                    classes: {
+                        ...state.suplimentary.classes,
+                        excercies: {
+                            ...state.suplimentary.classes.excercies,
+                            loading: false,
+                            ...action.payload
+                        }
                     }
                 }
             }

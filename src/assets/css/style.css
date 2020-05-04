@@ -762,7 +762,7 @@ header form .input-group-prepend .dropdown-item {
   border: 4px solid #387FE9;
 }
 
-.question-area .question-container {
+.question-container {
   position: relative;
 }
 
@@ -771,7 +771,7 @@ header form .input-group-prepend .dropdown-item {
   color: #364658;
 }
 
-.question-area .question-container.not-active::after {
+.question-container.not-active::after {
   position: absolute;
   content: "";
   left: 0;
@@ -1029,5 +1029,78 @@ header form .input-group-prepend .dropdown-item {
 .physics .rcs-inner-container {
   padding-right: 45px;
   margin-right: -40px !important;
+}
+
+
+/**
+Suplimentary
+Math Question
+**/
+.question-container .math-question {
+  background: #FFFFFF;
+  box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  align-self: center;
+  padding: 25px 20px;
+  font-family: Rubik;
+  font-weight: 500;
+  font-size: 18px;
+  color: #364658;
+  margin-bottom: 1em;
+  min-width: 160px;
+  text-align: center;
+}
+
+.assignment {
+  align-self: center;
+  margin: 0 3rem;
+}
+
+.guesses .custom-button > label {
+  margin: 0px 10px;
+  background: #FFFFFF;
+  box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  border: 1px solid #fff;
+  padding: 25px 15px;
+  align-self: center;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #364658;
+  min-width: 65px;
+}
+
+
+.math-question span {
+  font-size: 18px;
+  font-weight: bold;
+  align-self: center;
+  line-height: 18px;
+}
+
+.guesses .custom-button > label span {
+  font-weight: 900;
+}
+
+.step-down {
+  margin-top: 5rem;
+}
+
+.counter {
+  display: block;
+  text-align: center;
+  font-size: 4em;
+  font-weight: bold;
+  background: linear-gradient(90deg, #37A0F6, #387EE9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.counter.warning {
+background: linear-gradient(90deg, #FB872B 0%, #D9E021 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
 }
 /*# sourceMappingURL=style.css.map */

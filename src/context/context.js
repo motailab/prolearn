@@ -11,6 +11,9 @@ const initialState = {
         subjects: null,
         classes: {
             loading: false,
+            excercies: {
+                loading: false
+            }
         }
     }
 };
