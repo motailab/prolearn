@@ -16,26 +16,32 @@ function SideBar(props) {
             <ul>
             <li>
                 <NavLink to="/" activeClassName="active" isActive={checkActive}>
-                    <i className="fas fa-user-tie"></i>
-                    <span>Caroline </span>
+                    <i className="fas fa-home"></i>
+                    <span>Home </span>
                 </NavLink>
             </li>
             <li>
-                <NavLink to="/lession">
-                    <i className="fas fa-book"></i>
-                    <span>Lesson Plan</span>
+                <NavLink to="/learning-path">
+                    <i className="fas fa-road"></i>
+                    <span>Learning Path</span>
                 </NavLink>
             </li>
             <li>
-                <NavLink to="/suplimentary" activeClassName="active">
-                    <i className="fas fa-tasks"></i>
-                    <span>Supplementary classNameess</span>
+                <NavLink to="/rewards" activeClassName="active">
+                    <i className="fas fa-gift"></i>
+                    <span>Rewards</span>
+                </NavLink>
+            </li>
+            <li>
+                <NavLink to="/progress" activeClassName="active">
+                    <i className="fas fa-chart-line"></i>
+                    <span>Progress</span>
                 </NavLink>
             </li>
             <li>
                 <NavLink to="/setting">
                     <i className="fas fa-cog"></i>
-                    <span>Manage</span>
+                    <span>Settings</span>
                 </NavLink>
             </li>
             </ul>

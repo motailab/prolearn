@@ -1,11 +1,11 @@
 import React, { useEffect, useRef, useState} from 'react';
 
 
-export default function Timer({duration, onFinish, onStart, onHalf}) {
+export default function Timer({duration, onFinish, onStart, onHalf, stopTimer}) {
     const timerRef = useRef();
     const [warning, setWarning] = useState(false);
 
-    const startTimer = (duration) => {
+    const startTimer = (duration = 0) => {
         let time = duration*60, minutes, seconds;
         //notifying onStart Listener
         
@@ -26,14 +26,19 @@ export default function Timer({duration, onFinish, onStart, onHalf}) {
             }
 
             if(!warning && (time - Math.floor(duration*60/5)) <= 0) {
+                //show timer warning if time getting lower
                 setWarning(true);
+            } else if(time === (duration * 60)) {
+                // hide timer warning if reinitilize component 
+                setWarning(false);
             }
 
             if (time <= 0) {
                 clearInterval(IntervalId);
-                if(onFinish) onFinish();
+                if(onFinish) {
+                    onFinish();
+                }
             }
-
             --time;
 
         }, 1000);
@@ -42,9 +47,18 @@ export default function Timer({duration, onFinish, onStart, onHalf}) {
     }
 
     useEffect(() => {
-        let id = startTimer(duration);
+        let id;
+        
+        if(stopTimer) {
+            clearInterval(id);
+        }
+
+        if(duration && !stopTimer) {
+            id = startTimer(duration);
+        }
+
         return () => clearInterval(id);
-    }, []);
+    }, [duration, stopTimer]);
 
     return (
         <div className="card p-4 text-center">
