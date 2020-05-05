@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect } from 'react'
-import flag from '../assets/images/flag.png';
 
 function Header() {
     const [dropdownOpen, setDropDownOpen] = useState(false);

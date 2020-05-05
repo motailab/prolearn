@@ -536,7 +536,7 @@ header form .input-group-prepend .dropdown-item {
 }
 
 .test-history-progress .content .progress_wrap .progress-active {
-  background: #387EE9;
+  background: #37A0F6;
   height: 4px;
   top: 0;
   position: absolute;
@@ -762,7 +762,7 @@ header form .input-group-prepend .dropdown-item {
   border: 4px solid #387FE9;
 }
 
-.question-container {
+.question-area .question-container {
   position: relative;
 }
 
@@ -771,7 +771,7 @@ header form .input-group-prepend .dropdown-item {
   color: #364658;
 }
 
-.question-container.not-active::after {
+.question-area .question-container.not-active::after {
   position: absolute;
   content: "";
   left: 0;
@@ -859,9 +859,6 @@ header form .input-group-prepend .dropdown-item {
 
 .overViweWrap {
   min-height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   position: relative;
   -webkit-box-shadow: 10px 0 15px -5px rgba(0, 0, 0, 0.08);
           box-shadow: 10px 0 15px -5px rgba(0, 0, 0, 0.08);
@@ -890,23 +887,15 @@ header form .input-group-prepend .dropdown-item {
           box-shadow: 18px 0px 30px 10px rgba(0, 0, 0, 0.08);
 }
 
-.overview_footer_paddiing .over_viwe_footer .progress {
-  background: none;
-  width: 65px;
-  height: 65px;
-  border: 6px solid #37A0F6;
-  border-radius: 50%;
-  position: relative;
-  overflow: inherit;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.overview_footer_paddiing .over_viwe_footer .progress_area {
+  text-align: center;
 }
 
-.overview_footer_paddiing .over_viwe_footer .quote {
+.overview_footer_paddiing .over_viwe_footer .progress_area svg {
+  height: 65px;
+}
+
+.quote {
   text-align: center;
   min-height: 95px;
   -webkit-box-align: center;
@@ -920,7 +909,7 @@ header form .input-group-prepend .dropdown-item {
           justify-content: center;
 }
 
-.overview_footer_paddiing .over_viwe_footer .quote h3 {
+.quote h3 {
   font-size: 20px;
   background: linear-gradient(253.96deg, #4F00BC -3.37%, #29ABE2 99.26%);
   -webkit-background-clip: text;
@@ -1031,76 +1020,181 @@ header form .input-group-prepend .dropdown-item {
   margin-right: -40px !important;
 }
 
+.home {
+  padding-right: 25px;
+}
 
-/**
-Suplimentary
-Math Question
-**/
-.question-container .math-question {
-  background: #FFFFFF;
-  box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.15);
-  border-radius: 10px;
-  align-self: center;
-  padding: 25px 20px;
-  font-family: Rubik;
-  font-weight: 500;
-  font-size: 18px;
-  color: #364658;
-  margin-bottom: 1em;
-  min-width: 160px;
+.summary {
   text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
-.assignment {
-  align-self: center;
-  margin: 0 3rem;
-}
-
-.guesses .custom-button > label {
-  margin: 0px 10px;
-  background: #FFFFFF;
-  box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.15);
-  border-radius: 10px;
-  border: 1px solid #fff;
-  padding: 25px 15px;
-  align-self: center;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 21px;
-  text-align: center;
-  color: #364658;
-  min-width: 65px;
-}
-
-
-.math-question span {
-  font-size: 18px;
-  font-weight: bold;
-  align-self: center;
-  line-height: 18px;
-}
-
-.guesses .custom-button > label span {
-  font-weight: 900;
-}
-
-.step-down {
-  margin-top: 5rem;
-}
-
-.counter {
-  display: block;
-  text-align: center;
-  font-size: 4em;
-  font-weight: bold;
-  background: linear-gradient(90deg, #37A0F6, #387EE9);
+.summary h5 {
+  font-size: 50px;
+  background: -webkit-gradient(linear, right top, left top, color-stop(-48.28%, #FFFF7E), color-stop(135.34%, #00A8C5));
+  background: linear-gradient(270deg, #FFFF7E -48.28%, #00A8C5 135.34%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.counter.warning {
-background: linear-gradient(90deg, #FB872B 0%, #D9E021 100%);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+.summary h5.first {
+  background: linear-gradient(268.16deg, #37A0F6 -3.37%, #387EE9 99.26%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.summary h5.last {
+  background: linear-gradient(10deg, #D4145A 0%, #FBB03B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.summary p {
+  font-size: 12px;
+  margin-bottom: 0;
+  color: #364658;
+}
+
+.circleProgressBar {
+  text-align: center;
+}
+
+.circleProgressBar svg {
+  height: 115px;
+}
+
+.calender {
+  background: #ffffff;
+  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.calender .react-calendar {
+  border: 0;
+  width: 100%;
+}
+
+.calender .react-calendar .react-calendar__tile abbr {
+  border-radius: 50%;
+  width: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 12px;
+  height: 30px;
+  display: inline-block;
+}
+
+.calender .react-calendar .react-calendar__tile:hover {
+  background: white;
+}
+
+.calender .react-calendar .react-calendar__tile:hover abbr {
+  background: #37A0F6;
+  color: white;
+}
+
+.calender .react-calendar .react-calendar__tile--now,
+.calender .react-calendar .react-calendar__tile--active {
+  background: white;
+}
+
+.calender .react-calendar .react-calendar__tile--now abbr,
+.calender .react-calendar .react-calendar__tile--active abbr {
+  background: #37A0F6;
+  color: white;
+}
+
+.calender .react-calendar .react-calendar__tile--now abbr:hover,
+.calender .react-calendar .react-calendar__tile--active abbr:hover {
+  background: #0f8bf0;
+}
+
+.calender .react-calendar .react-calendar__tile--now:hover, .calender .react-calendar .react-calendar__tile--now:focus,
+.calender .react-calendar .react-calendar__tile--active:hover,
+.calender .react-calendar .react-calendar__tile--active:focus {
+  background: white;
+}
+
+.calender .react-calendar .react-calendar__month-view__weekdays__weekday {
+  color: #364658;
+}
+
+.calender .react-calendar .react-calendar__month-view__days__day--neighboringMonth {
+  color: #DEE5ED;
+}
+
+.calender .react-calendar .react-calendar__month-view__days__day--neighboringMonth:hover {
+  background: white !important;
+}
+
+.calender .react-calendar .react-calendar__year-view__months abbr {
+  width: auto;
+  height: auto;
+  border-radius: 5px;
+  padding: 0 10px;
+}
+
+.login-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: black;
+  background: -webkit-gradient(linear, left top, right top, from(black), color-stop(0%, #97bbf1), to(#97caf7));
+  background: linear-gradient(90deg, black 0%, #97bbf1 0%, #97caf7 100%);
+}
+
+.login-area .access_inner_wrap {
+  width: 420px;
+}
+
+.login-area .access_inner_wrap .logo {
+  text-align: center;
+  margin-top: -50px;
+  background: #fdfdfd;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  line-height: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -90px;
+}
+
+.login-area .access_inner_wrap h1 {
+  text-align: center;
+  font-size: 36px;
+  color: white;
+  font-weight: 400;
+}
+
+.login-area .access_inner_wrap form {
+  margin-top: 60px;
+  padding: 50px 50px 30px 50px;
+  background: #FDFDFD;
+  -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.15);
+  border-radius: 13px;
+}
+
+.login-area .access_inner_wrap form .form-control {
+  font-size: 10px;
+  color: black;
+}
+
+.profile-area .profile-header {
+  background: linear-gradient(10deg, #ab0c46 10%, #075bdcd6 100%);
+  padding-top: 80px;
+}
+
+.profile-area .profile-content {
+  background: white;
 }
 /*# sourceMappingURL=style.css.map */

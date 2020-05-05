@@ -16,7 +16,7 @@ const CircleProgressBarBase = ({
   innerText
   }) => {
     return (
-        <figure className={className}>
+        <figure style={{margin:'0'}} className={className}>
             <svg viewBox={circleConfig.viewBox}>
                 <circle
                 className="ring"
@@ -49,6 +49,7 @@ const CircleProgressBarBase = ({
                 <g className="circle-label">
                 <text x="50%" y="50%" className="circle-percentage" textAnchor="middle">
                     {percentage}%
+                    <span> Semister 2 </span>
                 </text>
                 {/* <text x="50%" y="50%" className="circle-text">
                     {innerText}

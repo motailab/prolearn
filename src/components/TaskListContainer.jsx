@@ -57,15 +57,14 @@ export default function TaskListContainer(params) {
                             <div className="col-2">
                                 <h4 className="title mb-3">Progress</h4>
                                 <div className="box">
-                                    {/* <div class="progress">
-                                        <div className="text">60 %</div>
-                                    </div> */}
-                                    <CircleProgressBar 
-                                        trailStrokeColor="#C4C4C4"
-                                        strokeColor="#37A0F6"
-                                        percentage={75}
-                                        innerText="complete"
-                                    />
+                                    <div class="progress_area">
+                                        <CircleProgressBar 
+                                            trailStrokeColor="#C4C4C4"
+                                            strokeColor="#37A0F6"
+                                            percentage={75}
+                                            innerText="complete"
+                                        />
+                                    </div>
                                 </div>
                             </div>
                             <div className="col">

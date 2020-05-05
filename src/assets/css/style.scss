@@ -837,7 +837,6 @@ header{
 
 .overViweWrap{
     min-height: 100vh;
-    display: flex;
     position: relative;
     box-shadow: 10px 0 15px -5px rgba(0, 0, 0, 0.08);
     padding-top: 20px;
@@ -860,33 +859,28 @@ header{
         z-index: 1000;
         box-shadow: 18px 0px 30px 10px rgba(0, 0, 0, 0.08);
      
-        .progress {
-             background: none;
-             width: 65px;
-             height: 65px;
-             border: 6px solid #37A0F6;
-             border-radius: 50%;
-             position: relative;
-             overflow: inherit;
-             align-items: center;
-             justify-content: center;
-         }
-     
-         .quote{
+        .progress_area {
              text-align: center;
-             min-height: 95px;
-             align-items: center;
-             display: flex;
-             justify-content: center;
-             h3{
-                 font-size: 20px;
-                 background: linear-gradient(253.96deg, #4F00BC -3.37%, #29ABE2 99.26%);
-                 -webkit-background-clip: text;
-                 -webkit-text-fill-color: transparent;
-                 margin-bottom: 0;
+             svg{
+                 height: 65px;
              }
          }
      }
+}
+
+.quote{
+    text-align: center;
+    min-height: 95px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    h3{
+        font-size: 20px;
+        background: linear-gradient(253.96deg, #4F00BC -3.37%, #29ABE2 99.26%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 0;
+    }
 }
 
 
@@ -975,4 +969,154 @@ header{
         padding-right: 45px;
         margin-right: -40px !important;
      }
+}
+
+// Home screen desing 
+
+.home{
+    padding-right: 25px;
+}
+.summary{
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    h5{
+        font-size: 50px;
+        background: $g-done;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        &.first{
+            background: $t-blue;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        &.last{
+            background: linear-gradient(10deg, #D4145A 0%, #FBB03B 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+    p{
+        font-size: 12px;
+        margin-bottom:0;
+        color: $black;
+    }
+}
+
+.circleProgressBar{
+    text-align: center;
+    svg{
+        height: 115px;
+    }
+}
+
+.calender{
+    background: $white;
+    @include shadow;
+    .react-calendar{
+        border:0;
+        width: 100%;
+        .react-calendar__tile {
+            abbr{
+                border-radius: 50%;
+                width:30px;
+                line-height: 30px;
+                text-align: center;
+                font-size: 12px;
+                height:30px;
+                display: inline-block;
+            }
+
+            &:hover{
+                background: white;
+                abbr{
+                    background: $blue;
+                    color: white;
+                }
+            }
+        }
+        .react-calendar__tile--now,
+        .react-calendar__tile--active{
+            background: white;
+            abbr{
+                background: $blue;
+                color: white;
+                &:hover{
+                    background: rgb(15, 139, 240);
+                }
+            }
+            &:hover, &:focus{
+                background: white;
+            }
+        }
+        .react-calendar__month-view__weekdays__weekday{
+            color: $black;
+        }
+
+        .react-calendar__month-view__days__day--neighboringMonth {
+            color: #DEE5ED;
+            &:hover{
+                background: white !important;
+            }
+        }
+        .react-calendar__year-view__months abbr{
+            width: auto;
+            height: auto;
+            border-radius: 5px;
+            padding: 0 10px;
+        }
+    }
+}
+
+.login-area{
+    // background: $t-blue;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    background: rgb(0,0,0);
+background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(151,187,241,1) 0%, rgba(151,202,247,1) 100%);
+    .access_inner_wrap{
+        width: 420px;
+        .logo {
+            text-align: center;
+            margin-top: -50px;
+            background: #fdfdfd;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            line-height: 80px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: -90px;
+        }
+        h1{
+            text-align: center;
+            font-size: 36px;
+            color: white;
+            font-weight: 400;
+        }
+
+        form{
+            margin-top: 60px;
+            padding: 50px 50px 30px 50px;
+            background: #FDFDFD;
+            box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.15);
+            border-radius: 13px;
+            .form-control{
+                font-size: 10px;
+                color: black;
+            }
+        }
+    }
+}
+
+.profile-area{
+    .profile-header{
+        background: linear-gradient(10deg, #ab0c46 10%, #075bdcd6 100%);
+        padding-top: 80px;
+    }
+    .profile-content{
+        background: white;
+    }
 }
