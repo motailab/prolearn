@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "07907d5f33524b954657bca2ba62c99a",
+    "revision": "616dbd5537293c0cbba314c8e03260fe",
     "url": "/prolearn/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/prolearn/static/css/2.8dbe6964.chunk.css"
   },
   {
-    "revision": "058079c2684496fb05e7",
+    "revision": "6e582fabaa2665a2ebf2",
     "url": "/prolearn/static/css/main.73ecd1c0.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/prolearn/static/js/2.1c9d5e46.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "058079c2684496fb05e7",
-    "url": "/prolearn/static/js/main.af03577b.chunk.js"
+    "revision": "6e582fabaa2665a2ebf2",
+    "url": "/prolearn/static/js/main.a4441f47.chunk.js"
   },
   {
     "revision": "d9bbd20996996f414d8f",
