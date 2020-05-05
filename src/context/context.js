@@ -15,6 +15,11 @@ const initialState = {
                 loading: false
             }
         }
+    },
+    confetti: {
+        show: false,
+        showTime: 15,
+        message: ''
     }
 };
 

@@ -8,15 +8,18 @@ import TaskContainer from "./components/TaskContainer";
 import Home from "./components/Home/Home";
 import SuplimentaryClasses from "./components/SuplimentaryClassContainer/SuplimentaryClasses/SuplimentaryClasses";
 import SuplimentaryExercise from "./components/SuplimentaryClassContainer/SuplimentaryExercise/SuplimentaryExercise";
+import FullScreenConfetti from "./components/FullScreenConfetti/FullScreenConfetti";
 
 function App() {
   return (
       <div className="main-panel">
           <Router>
             <AppProvider>
+              {/* sidebar */}
                 <SideBar />
+                {/* main content  */}
+                <FullScreenConfetti />
                 <Switch>
-
                   <Route exact path='/'>
                     <TaskListContainer />
                   </Route>

@@ -6,7 +6,9 @@ export const  TYPES = {
     LOADING_SUPLIMENTARY_CLASS: 'LOADING_SUPLIMENTARY_CLASS',
     SUPLIMENTARY_CLASS_LOADED: 'SUPLIMENTARY_CLASS_LOADED',
     LOADING_SUPLIMENTARY_EXCERCIES: 'LOADING_SUPLIMENTARY_EXCERCIES',
-    SUPLIMENTARY_EXCERCIES_LOADED: 'SUPLIMENTARY_EXCERCIES_LOADED'
+    SUPLIMENTARY_EXCERCIES_LOADED: 'SUPLIMENTARY_EXCERCIES_LOADED',
+    SHOW_CONFETTI: 'SHOW_CONFETTI',
+    HIDE_CONFETTI: 'HIDE_CONFETTI'
 };
 
 
@@ -112,6 +114,26 @@ export const  reducers = (state={}, action) => {
                             ...action.payload
                         }
                     }
+                }
+            };
+
+        case TYPES.SHOW_CONFETTI:
+            return {
+                ...state,
+                confetti: {
+                    ...state.confetti,
+                    ...action.payload,
+                    show: true
+                }
+            };
+        case TYPES.HIDE_CONFETTI:
+            return {
+                ...state,
+                confetti: {
+                    ...state.confetti,
+                    showTime: 15,
+                    message: '',
+                    show: false
                 }
             }
         default:
