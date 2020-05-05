@@ -6,7 +6,7 @@ import { fetchData } from '../utils/dataClient';
 const initialState = {
     completed_subject: [],
     subjects: [],
-    suplimentary: {
+    reward: {
         loading: false,
         subjects: null,
         classes: {

@@ -1,13 +1,13 @@
 import React, { useEffect, useContext } from 'react'
 import { useHistory, useParams } from 'react-router-dom';
-import SuplimentaryTask from './SuplimentaryTask/SuplimentaryTask';
+import RewardTask from './RewardTask/RewardTask';
 import { AppContext } from '../../../context/context';
 import { TYPES } from '../../../context/reducers';
 import { fetchData } from '../../../utils/dataClient';
 import Spinner from '../../Spinner/Spinner';
 
-export default function SuplimentaryClasses(props) {
-    const {state: { suplimentary: { classes }}, dispatch} = useContext(AppContext);
+export default function RewardClasses(props) {
+    const {state: { reward: { classes }}, dispatch} = useContext(AppContext);
     const params = useParams();
     const history = useHistory();
 
@@ -22,13 +22,13 @@ export default function SuplimentaryClasses(props) {
         if(!hasData()) {
             
             dispatch({
-                type: TYPES.LOADING_SUPLIMENTARY_CLASS
+                type: TYPES.LOADING_REWARD_CLASS
             });
 
-            fetchData(`/suplimentary/classes/${params.id}.json`)
+            fetchData(`/reward/classes/${params.id}.json`)
             .then(data => {
                 dispatch({
-                    type: TYPES.SUPLIMENTARY_CLASS_LOADED,
+                    type: TYPES.REWARD_CLASS_LOADED,
                     payload: {
                         [params.id]: data
                     }
@@ -39,7 +39,7 @@ export default function SuplimentaryClasses(props) {
                 console.log(err);
             })
         }
-
+        
     }, []);
 
     return (
@@ -55,9 +55,9 @@ export default function SuplimentaryClasses(props) {
                             classes.loading || hasData() === undefined ? <Spinner /> 
                             : hasData() ? 
                             hasData().map(item => (
-                                <SuplimentaryTask taskInfo={item} key={item.id}/>
+                                <RewardTask taskInfo={item} key={item.id}/>
                             ))
-                            : <div className="alert alert-warning text-center">Not Found Any Suplimentary class for this subject</div>
+                            : <div className="alert alert-warning text-center">Not Found Any Reward class for this subject</div>
                         }
                     </div>
                 </div>

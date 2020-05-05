@@ -3,7 +3,7 @@ import { Link, useRouteMatch } from 'react-router-dom';
 import rewardIcon from '../../../../assets/images/reward.svg';
 
 
-export default function SuplimentaryTask({taskInfo}) {
+export default function RewardTask({taskInfo}) {
     const match = useRouteMatch();
 
     const generateStyle = (time) => {

@@ -7,26 +7,26 @@ import { TYPES } from '../../context/reducers';
 
 import { fetchData } from '../../utils/dataClient';
 import Spinner from '../Spinner/Spinner';
-import SuplimentarySubject from './SuplimentarySubject/SuplimentarySubject';
+import RewardSubject from './RewardSubject/RewardSubject';
 import RightSidebar from '../RightSidebar';
 
 
-export default function SuplimentaryClassContainer(props) {
+export default function RewardClassContainer(props) {
     const location = useLocation();
     const history = useHistory();
-    const {state:{suplimentary: {subjects, loading}}, dispatch} = useContext(AppContext);
+    const {state:{reward: {subjects, loading}}, dispatch} = useContext(AppContext);
 
     useEffect(() => {
        
-        if(location.state && location.state.goForward) {
-            history.replace(location.state.goForward);
+        if(location.state && location.state.redirect) {
+            history.replace(location.state.redirect);
         }
 
         if(!subjects) {
-            fetchData('/suplimentary.json')
+            fetchData('/reward.json')
             .then(data => {
                 dispatch({
-                    type: TYPES.SUPLIMENTARY_SUBJECT_LOADED,
+                    type: TYPES.REWARD_SUBJECT_LOADED,
                     payload: data.subjects
                 });
             })
@@ -44,7 +44,7 @@ export default function SuplimentaryClassContainer(props) {
                 <div className="col-md-8 overViweWrap">
                     <CustomScroll heightRelativeToParent="100%">
                         <div className="row">
-                           {loading || !subjects ? <Spinner /> : subjects.map(item => (<SuplimentarySubject score={item.previous_score} {...item} key={item.id} />))}
+                           {loading || !subjects ? <Spinner /> : subjects.map(item => (<RewardSubject score={item.previous_score} {...item} key={item.id} />))}
                         </div>
                     </CustomScroll>
                 </div>

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Link, useRouteMatch } from 'react-router-dom';
 import HorizontalTimeLine from '../../../utils/HorizontalTimeLine';
 
-export default function SuplimentarySubject({score, ...props}) {
+export default function RewardSubject({score, ...props}) {
     const [showMenu, setShowMenu]  = useState(false);
     let match = useRouteMatch();
 

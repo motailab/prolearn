@@ -9,8 +9,8 @@ import Timer from '../../Timer/Timer';
 import RightSidebar from '../../RightSidebar';
 import CustomScroll  from 'react-custom-scroll';
 
-export default function SuplimentaryExercise(props) {
-    const {state: { suplimentary: { classes : { excercies }}}, dispatch} = useContext(AppContext);
+export default function RewardExercise(props) {
+    const {state: { reward: { classes : { excercies }}}, dispatch} = useContext(AppContext);
     const [isTimeFinish, setFinishTime] = useState(false);
     let [selectedAnswer, setSelectedAnswer] = useState([]);
     const [enableQuestion, setEnableNextQuestion] = useState(new Set());
@@ -49,7 +49,7 @@ export default function SuplimentaryExercise(props) {
     }
 
     const redo = () => {
-        history.replace('/suplimentary', {'goForward': match.url});
+        history.replace('/rewards', {'redirect': match.url});
     }
 
     const takeAnotherLession = () => {
@@ -57,17 +57,17 @@ export default function SuplimentaryExercise(props) {
     }
 
     useEffect(() => {
-        const url = `/suplimentary/classes/excercies/${params.classId}.json`;
+        const url = `/reward/classes/excercies/${params.classId}.json`;
 
         if(!getExcercies()) {
             dispatch({
-                type: TYPES.LOADING_SUPLIMENTARY_EXCERCIES
+                type: TYPES.LOADING_REWARD_EXCERCIES
             });
 
             fetchData(url)
             .then(data => {
                 dispatch({
-                    type: TYPES.SUPLIMENTARY_EXCERCIES_LOADED,
+                    type: TYPES.REWARD_EXCERCIES_LOADED,
                     payload: {
                         [params.classId]: data
                     }
@@ -102,8 +102,8 @@ export default function SuplimentaryExercise(props) {
             return item;
         });
 
-        
-        if((correctAnswer.length - 1) === checkedAns.filter(answer => answer.correct === true).length) {
+        const givenAnswerLength =  checkedAns.filter(answer => answer.correct === true).length;
+        if(givenAnswerLength >= (correctAnswer.length - 1)) {
             setExamStatus('pass')
             dispatch({
                 type: TYPES.SHOW_CONFETTI,
