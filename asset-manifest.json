@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/prolearn/static/css/main.8c4706e0.chunk.css",
-    "main.js": "/prolearn/static/js/main.64cd1dbb.chunk.js",
-    "main.js.map": "/prolearn/static/js/main.64cd1dbb.chunk.js.map",
+    "main.css": "/prolearn/static/css/main.73ecd1c0.chunk.css",
+    "main.js": "/prolearn/static/js/main.af03577b.chunk.js",
+    "main.js.map": "/prolearn/static/js/main.af03577b.chunk.js.map",
     "runtime-main.js": "/prolearn/static/js/runtime-main.435a6383.js",
     "runtime-main.js.map": "/prolearn/static/js/runtime-main.435a6383.js.map",
     "static/css/2.8dbe6964.chunk.css": "/prolearn/static/css/2.8dbe6964.chunk.css",
-    "static/js/2.a383b7f2.chunk.js": "/prolearn/static/js/2.a383b7f2.chunk.js",
-    "static/js/2.a383b7f2.chunk.js.map": "/prolearn/static/js/2.a383b7f2.chunk.js.map",
+    "static/js/2.1c9d5e46.chunk.js": "/prolearn/static/js/2.1c9d5e46.chunk.js",
+    "static/js/2.1c9d5e46.chunk.js.map": "/prolearn/static/js/2.1c9d5e46.chunk.js.map",
     "index.html": "/prolearn/index.html",
-    "precache-manifest.830117582b886a9150e649b53fa7869f.js": "/prolearn/precache-manifest.830117582b886a9150e649b53fa7869f.js",
+    "precache-manifest.b4f9c190ab2b45d019679e948aeb0dfb.js": "/prolearn/precache-manifest.b4f9c190ab2b45d019679e948aeb0dfb.js",
     "service-worker.js": "/prolearn/service-worker.js",
     "static/css/2.8dbe6964.chunk.css.map": "/prolearn/static/css/2.8dbe6964.chunk.css.map",
-    "static/css/main.8c4706e0.chunk.css.map": "/prolearn/static/css/main.8c4706e0.chunk.css.map",
-    "static/js/2.a383b7f2.chunk.js.LICENSE.txt": "/prolearn/static/js/2.a383b7f2.chunk.js.LICENSE.txt",
+    "static/css/main.73ecd1c0.chunk.css.map": "/prolearn/static/css/main.73ecd1c0.chunk.css.map",
+    "static/js/2.1c9d5e46.chunk.js.LICENSE.txt": "/prolearn/static/js/2.1c9d5e46.chunk.js.LICENSE.txt",
     "static/media/style.css": "/prolearn/static/media/check.4d1adedd.svg",
     "static/media/diagram.svg": "/prolearn/static/media/diagram.dab5baf0.svg",
     "static/media/logo.svg": "/prolearn/static/media/logo.9bff32ab.svg",
@@ -22,8 +22,8 @@
   "entrypoints": [
     "static/js/runtime-main.435a6383.js",
     "static/css/2.8dbe6964.chunk.css",
-    "static/js/2.a383b7f2.chunk.js",
-    "static/css/main.8c4706e0.chunk.css",
-    "static/js/main.64cd1dbb.chunk.js"
+    "static/js/2.1c9d5e46.chunk.js",
+    "static/css/main.73ecd1c0.chunk.css",
+    "static/js/main.af03577b.chunk.js"
   ]
 }
