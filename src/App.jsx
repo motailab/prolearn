@@ -14,7 +14,7 @@ import Login from "./components/Auth/Login";
 function App() {
   return (
       <div className="main">
-          <Router>
+          <Router basename="/">
             <AppProvider>
                 <Switch>
 
