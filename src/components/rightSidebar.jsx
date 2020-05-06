@@ -20,14 +20,14 @@ export default function RightSidebar() {
                     </div>
                     <div className="col">
                         <i className="fas fa-gift"></i>
-                        <h6>Rewards</h6>
+                        <h6>Rewards Earned</h6>
                         <h4 className="last">4</h4>
                     </div>
                  </div>
              </div>
 
             <div className="reward-wrap">
-                <h3 className="title">Rewards Earned <a href="#" className="gray"> <i className="fas fa-caret-left"></i> See all </a></h3>
+                <h3 className="title">Rewards <a href="#" className="gray"> <i className="fas fa-caret-left"></i> See all </a></h3>
                 <div className="box reward active">
                     <div className="media">
                         <i className="fas fa-gift"></i>

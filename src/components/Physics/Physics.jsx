@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { Redirect } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import CustomScroll from 'react-custom-scroll';
 import { AppContext } from '../../context/context';
 import { TYPES } from '../../context/reducers';
@@ -7,7 +7,7 @@ import Question from './Question';
 
 export default function Physics({subject, ...rest}) {
     const {state, dispatch} = useContext(AppContext);
-    const [redirect, setRedirect] = useState(false);
+    const history = useHistory();
     const [activeQs, setActiveQs] = useState(new Set([1]));
     const [guesses, setGuesses] = useState([]);
     const [ready, setReady] = useState(true);
@@ -59,7 +59,8 @@ export default function Physics({subject, ...rest}) {
             }
         });
 
-        setRedirect(true);
+        //redirect back to learning path
+        history.replace('/learning-path');
     }
 
     useEffect(() => {
@@ -81,7 +82,6 @@ export default function Physics({subject, ...rest}) {
 
     return (
         <div className="physics px-3">
-            {redirect && <Redirect to="/" />}
             <h4 className="title mb-3">Physics</h4>
             <div className="question-area" style={{height: "85vh", display: "flex"}}>
                 <CustomScroll heightRelativeToParent="100%">

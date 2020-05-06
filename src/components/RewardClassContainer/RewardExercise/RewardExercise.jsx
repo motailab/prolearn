@@ -131,7 +131,7 @@ export default function RewardExercise(props) {
 
     return (
         <div className="container-fluid">
-            <div className="row step-down pt-4">
+            <div className="row pt-4">
                 <div className="col-md-8">
                     <CustomScroll heightRelativeToParent="100%">
                         {

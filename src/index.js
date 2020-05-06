@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './assets/css/bootstrap.min.css';
 import './assets/css/custom-scroll.css';
-import './assets/css/style.css';
+import './assets/css/style.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 

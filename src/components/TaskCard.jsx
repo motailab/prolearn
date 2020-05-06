@@ -1,10 +1,11 @@
 import React, { useContext, useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useRouteMatch } from 'react-router-dom';
 import { AppContext } from '../context/context';
 
 export default function TaskCard({title, duration, description, ...rest}) {
     const { state } = useContext(AppContext);
     const [result, setResult] = useState({done: false, pass: false});
+    const match = useRouteMatch();
 
     useEffect(() => {
         const item = state.completed_subject.filter(item =>  title === item.name);
@@ -19,7 +20,7 @@ export default function TaskCard({title, duration, description, ...rest}) {
 
         // </div>
 
-        <NavLink to={'/subject/'+ title} activeClassName='activeRoute'>
+        <NavLink to={match.url+'/subject/'+ title} activeClassName='activeRoute'>
         <div className="taskbox">
             <div className="header">
                 <h4>{title ? title : 'History'} <span className="status"></span> </h4>
