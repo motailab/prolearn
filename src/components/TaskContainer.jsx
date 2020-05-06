@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useContext } from 'react';
-import CustomScroll from 'react-custom-scroll';
 import { useParams } from 'react-router-dom';
 import { AppContext } from '../context/context';
 import TaskCard from './TaskCard';
 import Component from '../utils/Components';
+import RightSidebar from './RightSidebar';
+import CountDown from './CountDown/CountDown';
 
 export default function TaskContainer(params) {
     const [selectedTask, setSelectedTask] = useState(undefined);
@@ -16,9 +17,9 @@ export default function TaskContainer(params) {
     }, [subjects, name]);
 
     return (
-        <div className="taskListContainer px-4">
+        <div className="taskListContainer px-4 pt-4">
             <div className="row">
-                <div className="col-md-4 overViweWrap">
+                {/* <div className="col-md-4 overViweWrap">
                     <div className="scroll_area" style={{height:"85vh"}}>
                         <CustomScroll heightRelativeToParent="100%">
                             <a href="#" className="overview"> <i className="fas fa-caret-left"></i> OverView</a>
@@ -32,10 +33,13 @@ export default function TaskContainer(params) {
                             </div>
                         </CustomScroll>
                     </div>
-                </div>
+                </div> */}
                 <div className="col-md-8">
                     {selectedTask ? <Component name={name.toLowerCase()} subject={selectedTask} /> : <h3>Component not ready</h3>}
-                    {/* {selectedSubject ? <Component name={name.toLowerCase()} subject={selectedSubject} /> : <h3 className="mt-5 pt-5 text-center">Component not ready</h3>} */}
+                </div>
+                <div className="col-md-4">
+                    <CountDown  duration={0}/>
+                    <RightSidebar />
                 </div>
             </div>
         </div>  

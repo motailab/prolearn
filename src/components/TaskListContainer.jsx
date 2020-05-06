@@ -4,9 +4,9 @@ import CustomScroll from 'react-custom-scroll';
 import { AppContext } from '../context/context';
 import TaskCard from './TaskCard'
 import RightSidebar from './RightSidebar';
-import RecomendedPlayer from './RecomendedVideoPlayer/RecomendedPlayer';
 import Spinner from './Spinner/Spinner';
 import CircleProgressBar from './CircleProgressBar/CircleProgressBar';
+import RecomendedVideo from './RecomendedTask/RecomendedVideo';
 
 export default function TaskListContainer(params) {
     const [subject_list, setSubjectList] = useState([]);
@@ -44,10 +44,28 @@ export default function TaskListContainer(params) {
                                     <Spinner />
                                 :
                                 (
-                                    <>
-                                      <RecomendedPlayer url="http://media.w3.org/2010/05/bunny/movie.mp4" />
-                                      <RecomendedPlayer url="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"/>
-                                    </>
+                                    <React.Fragment>
+                                        <div className="col-md-6">
+                                            <RecomendedVideo 
+                                            title='How And Why Read'
+                                            courseType='crash Course'
+                                            match='45'
+                                            data={{
+                                                    url: 'http://media.w3.org/2010/05/bunny/movie.mp4',
+                                                    thumbnail: null
+                                            }}/>
+                                        </div>
+                                        <div className="col-md-6">
+                                            <RecomendedVideo 
+                                            title='How And Why Read'
+                                            courseType='Rec Course'
+                                            match='33'
+                                            data={{
+                                                    url: 'https://media.w3.org/2010/05/sintel/trailer_hd.mp4',
+                                                    thumbnail: null
+                                            }}/>
+                                        </div>
+                                    </React.Fragment>
                                  )
                             }
                         </div>

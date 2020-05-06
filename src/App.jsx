@@ -10,6 +10,7 @@ import RewardClasses from "./components/RewardClassContainer/RewardClasses/Rewar
 import RewardExercise from "./components/RewardClassContainer/RewardExercise/RewardExercise";
 import MainLayout from "./components/Layout/MainLayout";
 import Login from "./components/Auth/Login";
+import VideoTask from "./components/VideoTask/VideoTask";
 
 function App() {
   return (
@@ -39,6 +40,10 @@ function App() {
                       <TaskContainer />
                     </Route>
 
+                    <Route exact path="/learning-path/video-lession">
+                      <VideoTask />
+                    </Route>
+
                     <Route  exact path="/rewards">
                       <RewardClassContainer />
                     </Route>
@@ -54,6 +59,7 @@ function App() {
                     <Route exact path="/profile">
                       <Profile/>
                     </Route>
+
                   </MainLayout>
 
                 </Switch>

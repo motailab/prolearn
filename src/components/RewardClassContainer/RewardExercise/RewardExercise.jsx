@@ -5,7 +5,7 @@ import { TYPES } from '../../../context/reducers';
 import { fetchData } from '../../../utils/dataClient';
 import Spinner from '../../Spinner/Spinner';
 import MathQuestion from './MathQuestion/MathQuestion';
-import Timer from '../../Timer/Timer';
+import CountDown from '../../CountDown/CountDown';
 import RightSidebar from '../../RightSidebar';
 import CustomScroll  from 'react-custom-scroll';
 
@@ -170,7 +170,7 @@ export default function RewardExercise(props) {
                     </CustomScroll>
                 </div>
                 <div className="col-md-4">
-                    <Timer duration={getExcercies() ? getExcercies().duration : 0} onFinish={onFinishTime} stopTimer={stopTimer}/>
+                    <CountDown duration={getExcercies() ? getExcercies().duration : 0} onFinish={onFinishTime} stopTimer={stopTimer}/>
                     <RightSidebar />
                 </div>
             </div>

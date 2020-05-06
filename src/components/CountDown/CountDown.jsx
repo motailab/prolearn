@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState} from 'react';
 
 
-export default function Timer({duration, onFinish, onStart, onHalf, stopTimer}) {
+export default function CountDown({duration, onFinish, onStart, onHalf, stopTimer}) {
     const timerRef = useRef();
     const [warning, setWarning] = useState(false);
 
@@ -49,6 +49,10 @@ export default function Timer({duration, onFinish, onStart, onHalf, stopTimer}) 
     useEffect(() => {
         let id;
         
+        if(duration === undefined) {
+            console.error('duartion property is madatory, without it unable to start countdown timer');
+        }
+
         if(stopTimer) {
             clearInterval(id);
         }
