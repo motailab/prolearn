@@ -14,7 +14,7 @@ import Login from "./components/Auth/Login";
 function App() {
   return (
       <div className="main">
-          <Router basename="/">
+          <Router>
             <AppProvider>
                 <Switch>
 
@@ -26,6 +26,11 @@ function App() {
                     <Route exact path='/'>
                       <Home />
                     </Route>
+
+                    <Route exact path='/prolearn'>
+                      <Home />
+                    </Route>
+
                     <Route exact path='/learning-path'>
                       <TaskListContainer />
                     </Route>
