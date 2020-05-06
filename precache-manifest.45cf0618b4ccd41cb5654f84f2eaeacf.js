@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "020b72b2b3e2bdba813c289c3b091800",
+    "revision": "24d593ee19db72caf5182e93981eac54",
     "url": "/prolearn/index.html"
   },
   {
-    "revision": "a783c0dcdb225a2e0188",
+    "revision": "4467e20fec8b3a8cc034",
     "url": "/prolearn/static/css/2.8dbe6964.chunk.css"
   },
   {
-    "revision": "9e66a218b6defcf99fee",
-    "url": "/prolearn/static/css/main.a4547fec.chunk.css"
+    "revision": "f28bb7b5cd6bdd4cc9cb",
+    "url": "/prolearn/static/css/main.37a728b1.chunk.css"
   },
   {
-    "revision": "a783c0dcdb225a2e0188",
-    "url": "/prolearn/static/js/2.92a536dc.chunk.js"
+    "revision": "4467e20fec8b3a8cc034",
+    "url": "/prolearn/static/js/2.0d6c5830.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/prolearn/static/js/2.92a536dc.chunk.js.LICENSE.txt"
+    "url": "/prolearn/static/js/2.0d6c5830.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9e66a218b6defcf99fee",
-    "url": "/prolearn/static/js/main.0a0e9e6d.chunk.js"
+    "revision": "f28bb7b5cd6bdd4cc9cb",
+    "url": "/prolearn/static/js/main.c4b22f6d.chunk.js"
   },
   {
     "revision": "d9bbd20996996f414d8f",
@@ -46,5 +46,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "6d97ab05c54a420c3f2c19e5a909fcf3",
     "url": "/prolearn/static/media/user.6d97ab05.jpg"
+  },
+  {
+    "revision": "a54553d4583ed8d97689699d7314edaa",
+    "url": "/prolearn/static/media/video-default-thumb.a54553d4.jpg"
   }
 ]);

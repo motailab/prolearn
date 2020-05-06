@@ -1,30 +1,31 @@
 {
   "files": {
-    "main.css": "/prolearn/static/css/main.a4547fec.chunk.css",
-    "main.js": "/prolearn/static/js/main.0a0e9e6d.chunk.js",
-    "main.js.map": "/prolearn/static/js/main.0a0e9e6d.chunk.js.map",
+    "main.css": "/prolearn/static/css/main.37a728b1.chunk.css",
+    "main.js": "/prolearn/static/js/main.c4b22f6d.chunk.js",
+    "main.js.map": "/prolearn/static/js/main.c4b22f6d.chunk.js.map",
     "runtime-main.js": "/prolearn/static/js/runtime-main.435a6383.js",
     "runtime-main.js.map": "/prolearn/static/js/runtime-main.435a6383.js.map",
     "static/css/2.8dbe6964.chunk.css": "/prolearn/static/css/2.8dbe6964.chunk.css",
-    "static/js/2.92a536dc.chunk.js": "/prolearn/static/js/2.92a536dc.chunk.js",
-    "static/js/2.92a536dc.chunk.js.map": "/prolearn/static/js/2.92a536dc.chunk.js.map",
+    "static/js/2.0d6c5830.chunk.js": "/prolearn/static/js/2.0d6c5830.chunk.js",
+    "static/js/2.0d6c5830.chunk.js.map": "/prolearn/static/js/2.0d6c5830.chunk.js.map",
     "index.html": "/prolearn/index.html",
-    "precache-manifest.4add6c823b04f31bbbc97b35c20fe7eb.js": "/prolearn/precache-manifest.4add6c823b04f31bbbc97b35c20fe7eb.js",
+    "precache-manifest.45cf0618b4ccd41cb5654f84f2eaeacf.js": "/prolearn/precache-manifest.45cf0618b4ccd41cb5654f84f2eaeacf.js",
     "service-worker.js": "/prolearn/service-worker.js",
     "static/css/2.8dbe6964.chunk.css.map": "/prolearn/static/css/2.8dbe6964.chunk.css.map",
-    "static/css/main.a4547fec.chunk.css.map": "/prolearn/static/css/main.a4547fec.chunk.css.map",
-    "static/js/2.92a536dc.chunk.js.LICENSE.txt": "/prolearn/static/js/2.92a536dc.chunk.js.LICENSE.txt",
+    "static/css/main.37a728b1.chunk.css.map": "/prolearn/static/css/main.37a728b1.chunk.css.map",
+    "static/js/2.0d6c5830.chunk.js.LICENSE.txt": "/prolearn/static/js/2.0d6c5830.chunk.js.LICENSE.txt",
     "static/media/style.scss": "/prolearn/static/media/check.4d1adedd.svg",
     "static/media/diagram.svg": "/prolearn/static/media/diagram.dab5baf0.svg",
     "static/media/logo.svg": "/prolearn/static/media/logo.9bff32ab.svg",
     "static/media/reward.svg": "/prolearn/static/media/reward.8b4481f1.svg",
-    "static/media/user.jpg": "/prolearn/static/media/user.6d97ab05.jpg"
+    "static/media/user.jpg": "/prolearn/static/media/user.6d97ab05.jpg",
+    "static/media/video-default-thumb.jpg": "/prolearn/static/media/video-default-thumb.a54553d4.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.435a6383.js",
     "static/css/2.8dbe6964.chunk.css",
-    "static/js/2.92a536dc.chunk.js",
-    "static/css/main.a4547fec.chunk.css",
-    "static/js/main.0a0e9e6d.chunk.js"
+    "static/js/2.0d6c5830.chunk.js",
+    "static/css/main.37a728b1.chunk.css",
+    "static/js/main.c4b22f6d.chunk.js"
   ]
 }
