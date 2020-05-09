@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "24d593ee19db72caf5182e93981eac54",
+    "revision": "a865270b70df81534302a76aab79d40f",
     "url": "/prolearn/index.html"
   },
   {
-    "revision": "4467e20fec8b3a8cc034",
+    "revision": "42e16f67c592a352decd",
     "url": "/prolearn/static/css/2.8dbe6964.chunk.css"
   },
   {
-    "revision": "f28bb7b5cd6bdd4cc9cb",
+    "revision": "61b2bb9f41709873921c",
     "url": "/prolearn/static/css/main.37a728b1.chunk.css"
   },
   {
-    "revision": "4467e20fec8b3a8cc034",
-    "url": "/prolearn/static/js/2.0d6c5830.chunk.js"
+    "revision": "42e16f67c592a352decd",
+    "url": "/prolearn/static/js/2.4c9714e7.chunk.js"
   },
   {
-    "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/prolearn/static/js/2.0d6c5830.chunk.js.LICENSE.txt"
+    "revision": "ca3cfcda77dc9f4f71fda9fdfcf14fb0",
+    "url": "/prolearn/static/js/2.4c9714e7.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f28bb7b5cd6bdd4cc9cb",
-    "url": "/prolearn/static/js/main.c4b22f6d.chunk.js"
+    "revision": "61b2bb9f41709873921c",
+    "url": "/prolearn/static/js/main.37f216e1.chunk.js"
   },
   {
     "revision": "d9bbd20996996f414d8f",
