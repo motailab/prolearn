@@ -11,6 +11,8 @@ import RewardExercise from "./components/RewardClassContainer/RewardExercise/Rew
 import MainLayout from "./components/Layout/MainLayout";
 import Login from "./components/Auth/Login";
 import VideoTask from "./components/VideoTask/VideoTask";
+import LearningPath from "./components/LearningPath/LearningPath";
+import Progress from "./components/Progress/Progress";
 
 function App() {
   return (
@@ -32,15 +34,19 @@ function App() {
                       <Home />
                     </Route>
 
-                    <Route exact path='/learning-path'>
+                    <Route exact path="/todays-task">
                       <TaskListContainer />
                     </Route>
 
-                    <Route exact path="/learning-path/subject/:name">
+                    <Route exact path='/learning-path'>
+                      <LearningPath />
+                    </Route>
+
+                    <Route exact path="/todays-task/subject/:name">
                       <TaskContainer />
                     </Route>
 
-                    <Route exact path="/learning-path/video-lession">
+                    <Route exact path="/todays-task/video-lession">
                       <VideoTask />
                     </Route>
 
@@ -54,6 +60,10 @@ function App() {
 
                     <Route exact path="/rewards/:subjectId/:classId">
                         <RewardExercise />
+                    </Route>
+
+                    <Route exact path="/progress/:active?">
+                      <Progress />
                     </Route>
 
                     <Route exact path="/profile">

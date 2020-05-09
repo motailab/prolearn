@@ -20,6 +20,10 @@ const initialState = {
         show: false,
         showTime: 15,
         message: ''
+    },
+    task_history: {
+        loading: false,
+        tasks: null
     }
 };
 

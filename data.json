@@ -206,5 +206,158 @@
                 }
             }
         }
+    },
+
+    "completed-task": {
+        "2020-5-9": [
+            {
+                "title": "Literature",
+                "duration": "20 minutes",
+                "description": "Questions about Modern World History will help you to understand even deeper about history.",
+                "subject": "Literature",
+                "id": 2
+            },
+            {
+                "title": "Physics",
+                "duration": "25 minutes",
+                "description": "Questions about Modern World History will help you to understand even deeper about history.",
+                "subject": "Physics",
+                "id": 1
+            },
+            {
+                "title": "History",
+                "duration": "45 minutes",
+                "description": "Questions about Modern World History will help you to understand even deeper about history.",
+                "subject": "History",
+                "id": 4
+            },
+            {
+                "title": "Mathematics",
+                "duration": "45 minutes",
+                "description": "Questions about Modern World History will help you to understand even deeper about history.",
+                "subject": "Mathematics",
+                "id": 5
+            }
+        ],
+        "2020-5-10": [
+            {
+                "title": "Literature",
+                "duration": "20 minutes",
+                "description": "Questions about Modern World History will help you to understand even deeper about history.",
+                "subject": "Literature",
+                "id": 2
+            },
+            {
+                "title": "Physics",
+                "duration": "25 minutes",
+                "description": "Questions about Modern World History will help you to understand even deeper about history.",
+                "subject": "Physics",
+                "id": 1
+            },
+            {
+                "title": "History",
+                "duration": "45 minutes",
+                "description": "Questions about Modern World History will help you to understand even deeper about history.",
+                "subject": "History",
+                "id": 4
+            },
+            {
+                "title": "Mathematics",
+                "duration": "45 minutes",
+                "description": "Questions about Modern World History will help you to understand even deeper about history.",
+                "subject": "Mathematics",
+                "id": 5
+            }
+        ],
+        "2020-5-11": [
+            {
+                "title": "Literature",
+                "duration": "20 minutes",
+                "description": "Questions about Modern World History will help you to understand even deeper about history.",
+                "subject": "Literature",
+                "id": 2
+            },
+            {
+                "title": "Physics",
+                "duration": "25 minutes",
+                "description": "Questions about Modern World History will help you to understand even deeper about history.",
+                "subject": "Physics",
+                "id": 1
+            },
+            {
+                "title": "History",
+                "duration": "45 minutes",
+                "description": "Questions about Modern World History will help you to understand even deeper about history.",
+                "subject": "History",
+                "id": 4
+            },
+            {
+                "title": "Mathematics",
+                "duration": "45 minutes",
+                "description": "Questions about Modern World History will help you to understand even deeper about history.",
+                "subject": "Mathematics",
+                "id": 5
+            }
+        ],
+        "2020-5-12": [
+            {
+                "title": "Literature",
+                "duration": "20 minutes",
+                "description": "Questions about Modern World History will help you to understand even deeper about history.",
+                "subject": "Literature",
+                "id": 2
+            },
+            {
+                "title": "Physics",
+                "duration": "25 minutes",
+                "description": "Questions about Modern World History will help you to understand even deeper about history.",
+                "subject": "Physics",
+                "id": 1
+            },
+            {
+                "title": "History",
+                "duration": "45 minutes",
+                "description": "Questions about Modern World History will help you to understand even deeper about history.",
+                "subject": "History",
+                "id": 4
+            },
+            {
+                "title": "Mathematics",
+                "duration": "45 minutes",
+                "description": "Questions about Modern World History will help you to understand even deeper about history.",
+                "subject": "Mathematics",
+                "id": 5
+            }
+        ],
+        "2020-5-13": [
+            {
+                "title": "Literature",
+                "duration": "20 minutes",
+                "description": "Questions about Modern World History will help you to understand even deeper about history.",
+                "subject": "Literature",
+                "id": 2
+            },
+            {
+                "title": "Physics",
+                "duration": "25 minutes",
+                "description": "Questions about Modern World History will help you to understand even deeper about history.",
+                "subject": "Physics",
+                "id": 1
+            },
+            {
+                "title": "History",
+                "duration": "45 minutes",
+                "description": "Questions about Modern World History will help you to understand even deeper about history.",
+                "subject": "History",
+                "id": 4
+            },
+            {
+                "title": "Mathematics",
+                "duration": "45 minutes",
+                "description": "Questions about Modern World History will help you to understand even deeper about history.",
+                "subject": "Mathematics",
+                "id": 5
+            }
+        ]
     }
 }

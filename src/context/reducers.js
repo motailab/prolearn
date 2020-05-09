@@ -8,7 +8,9 @@ export const  TYPES = {
     LOADING_REWARD_EXCERCIES: 'LOADING_REWARD_EXCERCIES',
     REWARD_EXCERCIES_LOADED: 'REWARD_EXCERCIES_LOADED',
     SHOW_CONFETTI: 'SHOW_CONFETTI',
-    HIDE_CONFETTI: 'HIDE_CONFETTI'
+    HIDE_CONFETTI: 'HIDE_CONFETTI',
+    LOADING_TASK_HISTORY: 'LOADING_TASK_HISTORY',
+    LOADED_TASK_HISTORY: 'LOADED_TASK_HISTORY',
 };
 
 
@@ -116,6 +118,25 @@ export const  reducers = (state={}, action) => {
                     }
                 }
             };
+        
+        case TYPES.LOADING_TASK_HISTORY:
+            return {
+                ...state,
+                task_history: {
+                    ...state.task_history,
+                    loading: true
+                }
+            };
+        
+        case TYPES.LOADED_TASK_HISTORY:
+            return {
+                ...state,
+                task_history: {
+                    ...state.task_history,
+                    tasks: action.payload,
+                    loading: false
+                }           
+            };
 
         case TYPES.SHOW_CONFETTI:
             return {
@@ -126,6 +147,7 @@ export const  reducers = (state={}, action) => {
                     show: true
                 }
             };
+
         case TYPES.HIDE_CONFETTI:
             return {
                 ...state,

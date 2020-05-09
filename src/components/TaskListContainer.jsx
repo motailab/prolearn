@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState, useEffect, useContext } from 'react';
 import CustomScroll from 'react-custom-scroll';
+import { useHistory } from 'react-router-dom';
 import { AppContext } from '../context/context';
 import TaskCard from './TaskCard'
 import RightSidebar from './RightSidebar';
@@ -11,7 +12,7 @@ import RecomendedVideo from './RecomendedTask/RecomendedVideo';
 export default function TaskListContainer(params) {
     const [subject_list, setSubjectList] = useState([]);
     const [showSpinner, setShowSpinner] = useState(true);
-
+    const history = useHistory();
     const {state} = useContext(AppContext);
 
     useEffect(() => {
@@ -23,28 +24,28 @@ export default function TaskListContainer(params) {
        
     }, [state]);
 
+    const goBack = (e) => {
+        e.preventDefault();
+        history.goBack();
+    }
+
     return (
         <div className="taskListContainer px-4">
             <div className="row">
                 <div className="col-lg-8 col-md-6 overViweWrap overview_footer_paddiing">
                     <CustomScroll heightRelativeToParent="100%">
-                        <a href="#" className="overview"> <i className="fas fa-caret-left"></i> OverView</a>
+                        <a href="#" className="overview" onClick={goBack}><i className="fas fa-caret-left"></i> OverView</a>
                         <h1 className="title">Todays Task</h1>
                         <div className="row">
-                                {subject_list.map(item => (
-                                    <div className="col-lg-6" key={item.id}>
-                                        <TaskCard {...item}  />
-                                    </div>
-                                ))}
-                        </div>
-                        <h4 className="title mb-3 mt-3">Recomended Tasks</h4>
-                        <div className="row">
-                            {
-                                showSpinner ?
-                                    <Spinner />
-                                :
+                            {showSpinner ? <Spinner /> :
                                 (
                                     <React.Fragment>
+                                        {subject_list.map(item => (
+                                            <div className="col-lg-6" key={item.id}>
+                                                <TaskCard {...item}  />
+                                            </div>
+                                        ))}
+
                                         <div className="col-md-6">
                                             <RecomendedVideo 
                                             title='How And Why Read'
@@ -55,6 +56,7 @@ export default function TaskListContainer(params) {
                                                     thumbnail: null
                                             }}/>
                                         </div>
+
                                         <div className="col-md-6">
                                             <RecomendedVideo 
                                             title='How And Why Read'
@@ -66,11 +68,12 @@ export default function TaskListContainer(params) {
                                             }}/>
                                         </div>
                                     </React.Fragment>
-                                 )
+                                )
+                            
                             }
                         </div>
                     </CustomScroll>
-                    <div className="over_viwe_footer">
+                    {/* <div className="over_viwe_footer">
                         <div className="row">
                             <div className="col-2">
                                 <h4 className="title mb-3">Progress</h4>
@@ -92,7 +95,7 @@ export default function TaskListContainer(params) {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
                 <div className="col-lg-4 col-md-6">
                    <RightSidebar/>
