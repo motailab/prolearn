@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import thumb from '../../assets/images/video-default-thumb.jpg';
 
 
@@ -8,7 +8,7 @@ export default function RecomendedVideo({title, match, courseType, ...props}) {
     return (
         <div className="box player-container">
             <Link to={{
-                pathname: '/learning-path/video-lession',
+                pathname: '/todays-task/video-lession',
                 state: {
                     currentPlay: {
                         title,
