@@ -1114,11 +1114,129 @@ background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(151,187,241,1) 0%, rgb
 
 .profile-area{
     .profile-header{
-        background: linear-gradient(10deg, #ab0c46 10%, #075bdcd6 100%);
-        padding-top: 80px;
+        padding-top: 50px;
+        background: linear-gradient(-0deg, #37a0f6 -100%, #ffffffd6 50%);
+        border-bottom: 3px solid #37a0f6;
+        padding-bottom: 30px;
+        .profile_image{
+            width: 220px;
+            height: 170px;
+            /* border: 3px solid #37a0f6; */
+            box-shadow: 0px 11px 0px rgb(55, 160, 246);
+            border-radius: 5px;
+            margin-right: 25px;
+            border-radius: 50%;
+            overflow: hidden;
+        
+            img{
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+            }
+        }
+        .media-body{
+            h1{
+                font-size: 20px;
+                color: $black;
+                margin-top:60px;
+            }
+            p{
+              font-size: 14px;
+              color: $black;
+              margin: 0;
+            }
+        }
+
+        .rogress_area{
+            width: 200px;
+        }
     }
     .profile-content{
-        background: white;
+        .overViweWrap{
+            padding-top: 35px;
+        }
+        .information{
+            .box{
+                border-left: 2px solid #FF9800;
+                .header{
+                    margin-bottom: 15px;
+                    h3{
+                        font-size: 17px;
+                    }
+                }
+                .box{
+                    border-left:5px solid $blue;
+                    .content{
+                        h4{
+                            font-size: 14px;
+                            color: $black;
+                        }
+                        h5{
+                            background: linear-gradient(90deg, #FB872B 0%, #D9E021 100%);
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            font-size: 12px;
+                        }
+                        p{
+                            font-size: 12px;
+                            color: $deepGray;
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+        .interest{
+            border-radius: 5px;
+            @include shadow;
+            overflow: hidden;
+            background: white;
+            top: 25px;
+            margin-top: 20px;
+            h4{
+                font-style: normal;
+                font-weight: bold;
+                font-size: 25px;
+                line-height: 15px;
+                margin-bottom: 0;
+                color: white;
+                background: $t-blue;
+                padding: 20px 10px 0;
+                text-transform: uppercase;
+            }
+            .text-wrap{
+                padding: 15px;
+                min-height: 350px;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                p{
+                    font-size: 15px;
+                    color: $deepGray;
+                    text-align: center;
+                }
+                ul{
+                    padding: 0;
+                    margin: 0;
+                    display: flex;
+                    justify-content: space-between;
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 0;
+                    padding: 10px 15px;
+                    background: #ebf2fc;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    li{
+                        list-style: none;
+                        display: inline-block;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -1244,9 +1362,9 @@ Math Question
   }
   
   .counter.warning {
-  background: linear-gradient(90deg, #FB872B 0%, #D9E021 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    background: linear-gradient(90deg, #FB872B 0%, #D9E021 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
 
@@ -1279,3 +1397,5 @@ Math Question
         }
     }
 }
+
+// 
