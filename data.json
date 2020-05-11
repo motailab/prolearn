@@ -2,7 +2,7 @@
     "subjects": [
         {
             "title": "Literature",
-            "duration": "20 minutes",
+            "duration": 20,
             "description": "Questions about Modern World History will help you to understand even deeper about history.",
             "subject": "Literature",
             "id": 2,
@@ -15,7 +15,7 @@
         },
         {
             "title": "Physics",
-            "duration": "25 minutes",
+            "duration": 25,
             "description": "Questions about Modern World History will help you to understand even deeper about history.",
             "subject": "Physics",
             "id": 1,
@@ -71,10 +71,17 @@
         },
         {
             "title": "History",
-            "duration": "45 minutes",
+            "duration": 45,
             "description": "Questions about Modern World History will help you to understand even deeper about history.",
             "subject": "History",
             "id": 3
+        },
+        {
+            "title": "Mathematics",
+            "duration": 22,
+            "description": "Questions about Modern World History will help you to understand even deeper about history.",
+            "subject": "Mathematics",
+            "id": 4
         }
     ],
     "reward": {

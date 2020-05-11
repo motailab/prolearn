@@ -34,7 +34,7 @@ export default function TaskCard(props) {
             <div className="taskbox">
                 <div className="header">
                     <h4>{title ? title : 'History'} <span className="status"></span> </h4>
-                    <p>Estimated Time: {duration ? duration : '2 hours'}</p>
+                    <p>Estimated Time: {duration ? duration : '20'} Minutes</p>
                 </div>
                 <div className="content">
                     {description ? description : 'Questions about Modern World History will help you to understand even deeper about history.'}

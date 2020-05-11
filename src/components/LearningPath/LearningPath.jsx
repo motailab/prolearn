@@ -34,7 +34,7 @@ export default function LearningPath(props) {
     
 
     useEffect(() => {
-
+       
         if((!tasks && loading) || activeDate !== selectedDate) {
             setActiveDate(selectedDate);
 

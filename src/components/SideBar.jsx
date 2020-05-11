@@ -26,12 +26,12 @@ function SideBar(props) {
                         <span>Learning Path</span>
                     </NavLink>
                 </li>
-                <li>
+                {/* <li>
                     <NavLink to="/rewards" activeClassName="active">
                         <i className="fas fa-gift"></i>
                         <span>Rewards</span>
                     </NavLink>
-                </li>
+                </li> */}
                 <li>
                     <NavLink to="/progress" activeClassName="active">
                         <i className="fas fa-chart-line"></i>

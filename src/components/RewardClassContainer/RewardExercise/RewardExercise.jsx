@@ -9,7 +9,8 @@ import CountDown from '../../CountDown/CountDown';
 import RightSidebar from '../../RightSidebar';
 import CustomScroll  from 'react-custom-scroll';
 
-export default function RewardExercise(props) {
+export default function RewardExercise({asAChild, dataUrl, timeEnd}) {
+
     const {state: { reward: { classes : { excercies }}}, dispatch} = useContext(AppContext);
     const [isTimeFinish, setFinishTime] = useState(false);
     let [selectedAnswer, setSelectedAnswer] = useState([]);
@@ -57,7 +58,7 @@ export default function RewardExercise(props) {
     }
 
     useEffect(() => {
-        const url = `/reward/classes/excercies/${params.classId}.json`;
+        const url = dataUrl ? `/reward/classes/excercies/${dataUrl}.json` : `/reward/classes/excercies/${params.classId}.json`;
 
         if(!getExcercies()) {
             dispatch({
@@ -77,7 +78,12 @@ export default function RewardExercise(props) {
                 console.log(err);
             })
         }
-    }, []);
+
+        if(timeEnd) {
+            setFinishTime(true);
+        }
+
+    }, [timeEnd]);
 
 
     const onFinishTime = () => {
@@ -132,7 +138,7 @@ export default function RewardExercise(props) {
     return (
         <div className="container-fluid">
             <div className="row pt-4">
-                <div className="col-md-8">
+                <div className={asAChild ? 'col-md-12' : 'col-md-8'}>
                     <CustomScroll heightRelativeToParent="100%">
                         {
                             (excercies.loading || getExcercies() === undefined) ? <Spinner /> :
@@ -169,10 +175,15 @@ export default function RewardExercise(props) {
 
                     </CustomScroll>
                 </div>
-                <div className="col-md-4">
-                    <CountDown duration={getExcercies() ? getExcercies().duration : 0} onFinish={onFinishTime} stopTimer={stopTimer}/>
-                    <RightSidebar />
-                </div>
+
+                {/* if this component used inside another component then sidebar will be hidden   */}
+                {!asAChild ? 
+                    <div className="col-md-4">
+                        <CountDown duration={getExcercies() ? getExcercies().duration : 0} onFinish={onFinishTime} stopTimer={stopTimer}/>
+                        <RightSidebar />
+                    </div>
+                : null
+                }
             </div>
         </div>
     );
