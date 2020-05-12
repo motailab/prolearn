@@ -13,6 +13,7 @@ import Login from "./components/Auth/Login";
 import VideoTask from "./components/VideoTask/VideoTask";
 import LearningPath from "./components/LearningPath/LearningPath";
 import Progress from "./components/Progress/Progress";
+import Header from "./components/Header";
 
 function App() {
   return (
@@ -21,16 +22,13 @@ function App() {
             <AppProvider>
                 <Switch>
 
-                  <Route exact path="/login">
+                  <Route exact path="/prolearn">
                       <Login />
                   </Route>
 
                   <MainLayout>
-                    <Route exact path='/'>
-                      <Home />
-                    </Route>
-
-                    <Route exact path='/prolearn'>
+                    
+                    <Route exact path='/home'>
                       <Home />
                     </Route>
 

@@ -138,8 +138,9 @@ export default function RewardExercise({asAChild, dataUrl, timeEnd}) {
     return (
         <div className="container-fluid">
             <div className="row pt-4">
-                <div className={asAChild ? 'col-md-12' : 'col-md-8'}>
-                    <CustomScroll heightRelativeToParent="100%">
+                <div className={asAChild ? 'col-md-12' : 'col-md-8'} >
+                  
+                    {/* <CustomScroll heightRelativeToParent="100%"> */}
                         {
                             (excercies.loading || getExcercies() === undefined) ? <Spinner /> :
                                 (getExcercies() !== null) ? getExcercies().questions.map((item, indx) => (
@@ -173,7 +174,7 @@ export default function RewardExercise({asAChild, dataUrl, timeEnd}) {
                                 }
                             </div> : null}
 
-                    </CustomScroll>
+                    {/* </CustomScroll> */}
                 </div>
 
                 {/* if this component used inside another component then sidebar will be hidden   */}

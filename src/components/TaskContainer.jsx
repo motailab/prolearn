@@ -21,9 +21,9 @@ export default function TaskContainer(params) {
     }
 
     return (
-        <div className="taskListContainer px-4 pt-4">
+        <div className="taskListContainer px-4">
             <div className="row">
-                <div className="col-md-8">
+                <div className="col-md-8 overViweWrap home">
                     {selectedTask ? <Component name={name.toLowerCase()} subject={selectedTask} timeEnd={timeEnd} /> : <h3>Component not ready</h3>}
                 </div>
                 <div className="col-md-4">

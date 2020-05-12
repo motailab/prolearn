@@ -6,7 +6,7 @@ export default function RecomendedPlayer({ url }) {
     return (
         <div className="col-md-6">
             <div className="box player-container">
-                <div className="row">
+                <div className="row align-items-center">
                     <div className='col-7'>
                         <ReactPlayer 
                         url={url} 

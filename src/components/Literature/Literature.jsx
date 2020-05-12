@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import { Redirect } from 'react-router-dom';
 import { AppContext } from '../../context/context';
 import { TYPES } from '../../context/reducers';
+import { Link } from 'react-router-dom';
 
 export default function Literature({subject}) {
     const [answer, setAnswer] = useState('');
@@ -54,6 +55,7 @@ export default function Literature({subject}) {
     return (
         <div className='literature p-4'>
             {redirect ? <Redirect to="/" /> : null}
+            <Link className="overview" to="/todays-task"><i className="fas fa-caret-left"></i> Back </Link>
             <h4 className="title">Literature</h4>
             <form onSubmit={handleFormSubmit}>
                 <div className="form-group">

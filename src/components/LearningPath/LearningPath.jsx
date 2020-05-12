@@ -57,9 +57,12 @@ export default function LearningPath(props) {
     }, [activeDate, selectedDate, tasks, loading, dispatch]);
 
     return (
-        <div className="container-fluid">
+        <div className="taskListContainer px-4">
             <div className="row">
-                <div className="col-md-4">
+               <div className="col-md-8 overViweWrap">
+                   <div className="row">
+                   <div className="col-md-7">
+                       <h4 className="title">Archive task</h4>
                     <div className="calender text-center">
                         <strong className="d-block py-2">{ getCurrentMonth() }</strong>
                         <Calender 
@@ -70,12 +73,12 @@ export default function LearningPath(props) {
                         />
                     </div>
                     
-                    <h5 className="mt-4">Summary Of day</h5>
-                    <p className="text-center">
+                    <h4 className="title mt-3">Summary Of day</h4>
+                    {/* <p style={{fontSize: "12px"}} >
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas, rerum temporibus eaque hic quibusdam,
-                    </p>
+                    </p> */}
 
-                    <div className="box summary">
+                    <div className="box summary mt-4">
                         <div className="row">
                             <div className="col">
                                 <h5 className="first">
@@ -90,15 +93,22 @@ export default function LearningPath(props) {
                         </div>
                     </div>
                 </div>
-                <div className="col-md-4 h-100">
-                    <CustomScroll heightRelativeToParent="100%">
-                        {tasks === undefined || loading ? <Spinner /> :
-                            tasks ? tasks.map(item => (
-                                <TaskCard {...item}  key={item.id} link={"/todays-task/subject/"+item.title} /> 
-                            )) : <div className='alert alert-warning py-4 text-center'>No History Found</div>
-                        }
-                    </CustomScroll>
-                </div>
+                <div className="col-md-5 ">
+                            <h4 className="title mt-2">
+                                Previous task list
+                            </h4>
+                            <div className="previous-task-wrap">
+                                <CustomScroll heightRelativeToParent="100%">
+                                    {tasks === undefined || loading ? <Spinner /> :
+                                        tasks ? tasks.map(item => (
+                                            <TaskCard {...item}  key={item.id} link={"/todays-task/subject/"+item.title} /> 
+                                        )) : <div className='alert alert-warning py-4 text-center'>No History Found</div>
+                                    }
+                                </CustomScroll>
+                            </div>
+                        </div>
+                   </div>
+               </div>
                 <div className="col-md-4">
                     <RightSidebar />
                 </div>

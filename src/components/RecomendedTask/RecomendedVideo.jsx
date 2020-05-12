@@ -7,30 +7,44 @@ export default function RecomendedVideo({title, match, courseType, ...props}) {
     
     return (
         <div className="box player-container">
-            <Link to={{
-                pathname: '/todays-task/video-lession',
-                state: {
-                    currentPlay: {
-                        title,
-                        courseType,
-                        match,
-                        ...props
-                    }
-                }
-            }}>
-                <div className="row">
+
+                <div className="row align-items-center">
                     <div className='col-7'>
+                    <Link to={{
+                            pathname: '/todays-task/video-lession',
+                            state: {
+                                currentPlay: {
+                                    title,
+                                
+                                    ...props
+                                }
+                            }
+                        }}>
                         <img src={props.thumbnail ? props.thumbnail : thumb} alt="img-thumbnail" className="img-fluid"/>
+                     </Link>
                     </div>
                     <div className="col pl-0">
-                    <h4 className="title">{title}</h4>
+                      <h4 className="title">
+                      <Link to={{
+                            pathname: '/todays-task/video-lession',
+                            state: {
+                                currentPlay: {
+                                    title,
+                                
+                                    ...props
+                                }
+                            }
+                        }}>
+                          {title}
+                          </Link>
+                          </h4>
                         <p>- {courseType}</p>
                         <div className="match">
-                            <h3>{match}% <span>match</span></h3>
+                            <h3 className="mt-2 mb-0">{match}% <span>match</span></h3>
                         </div>
                     </div>
                 </div>
-            </Link>
+           
         </div>
     );
 };

@@ -154,9 +154,7 @@ export default function Profile() {
                          </div>
                     </div>
                     <div className="col-lg-4 col-md-6">
-                        <div className="sticky-top">
-                           <RightSidebar/>
-                        </div>
+                       <RightSidebar/>
                     </div>
                 </div>       
             </div>

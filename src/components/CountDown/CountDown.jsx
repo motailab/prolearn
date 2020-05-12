@@ -65,10 +65,10 @@ export default function CountDown({duration, onFinish, onStart, onHalf, stopTime
     }, [duration, stopTimer]);
 
     return (
-        <div className="card p-4 text-center">
-           <div className="counter-wrapper">
+        <div className="counter-wrapper">
+           <div className="box">
                 <div className={`counter ${warning ? 'warning' : ''}`} ref={timerRef}></div>
-                <h4>Time Remening</h4>
+                <h5>Time Remening</h5>
            </div>
         </div>
     )

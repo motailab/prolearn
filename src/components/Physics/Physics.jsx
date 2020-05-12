@@ -4,6 +4,8 @@ import CustomScroll from 'react-custom-scroll';
 import { AppContext } from '../../context/context';
 import { TYPES } from '../../context/reducers';
 import Question from './Question';
+import { Link } from 'react-router-dom';
+
 
 export default function Physics({subject, ...rest}) {
     const {state, dispatch} = useContext(AppContext);
@@ -81,7 +83,9 @@ export default function Physics({subject, ...rest}) {
 
 
     return (
-        <div className="physics px-3">
+        <div className="physics">
+             <Link className="overview" to="/todays-task"><i className="fas fa-caret-left"></i> Back </Link>
+            {/* <a href="#" className="overview" onClick={goBack}><i className="fas fa-caret-left"></i> Back</a> */}
             <h4 className="title mb-3">Physics</h4>
             <div className="question-area" style={{height: "85vh", display: "flex"}}>
                 <CustomScroll heightRelativeToParent="100%">

@@ -4,9 +4,9 @@ import CustomButton from '../../../CustomButton/CustomButton';
 
 export default function MathQuestion({question, onSelect, isEnable, index, result}) {
 
-    
     return (
         <div className="col-md-8 offset-md-2">
+
             <div className={`d-flex justify-content-center question-container ${isEnable ? '' : 'not-active'}`}>
                 <div className="math-question">
                     <Latex>{question.question}</Latex>

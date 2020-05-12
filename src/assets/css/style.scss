@@ -847,7 +847,6 @@ header{
 }
 
 .overview_footer_paddiing{
-    padding-bottom: 170px;
     height:100vh;
     .over_viwe_footer{
         background: #eef2f6;
@@ -1191,7 +1190,7 @@ background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(151,187,241,1) 0%, rgb
             @include shadow;
             overflow: hidden;
             background: white;
-            top: 25px;
+            top: 80px;
             margin-top: 20px;
             h4{
                 font-style: normal;
@@ -1289,10 +1288,40 @@ background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(151,187,241,1) 0%, rgb
   .guesses .custom-button.correct > label {
     border-color: rgb(4, 100, 12);
   }
+
+  .guesses .katex .size3 .mord.mtight{
+        // height: 2px;
+        width: 100%;
+        // background: blue;
+    }
+
+    .guesses .katex{
+        position: relative;
+        // height: 2px;
+        width: 100%;
+        // background: blue;
+    }
+
+    .guesses .katex:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: $black;
+        z-index: 10;
+        top:13px;
+    }
+
+    .guesses .custom-button > label span {
+        font-weight: 700;
+        font-family: 'Rubik', sans-serif;
+        letter-spacing: 2px;
+    }
   
-  .btn-info.other {
-    background: linear-gradient(-90deg, #FFFF7E 0%,#00A8C5 100%);
-  }
+    .btn-info.other {
+        background: linear-gradient(-90deg, #FFFF7E 0%,#00A8C5 100%);
+    }
 
   
 /**
@@ -1336,35 +1365,23 @@ Math Question
   }
   
   
-  .math-question span {
-    font-size: 18px;
-    font-weight: bold;
-    align-self: center;
-    line-height: 18px;
-  }
-  
-  .guesses .custom-button > label span {
-    font-weight: 900;
-  }
-  
-  .step-down {
-    margin-top: 5rem;
-  }
-  
-  .counter {
-    display: block;
-    text-align: center;
-    font-size: 4em;
-    font-weight: bold;
-    background: linear-gradient(90deg, #37A0F6, #387EE9);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  
-  .counter.warning {
-    background: linear-gradient(90deg, #FB872B 0%, #D9E021 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  .math-question {
+      span{
+        // font-size: 18px;
+        font-weight: bold;
+        align-self: center;
+        line-height: 18px;
+        font-family: 'Rubik', sans-serif;
+        font-weight: 700;
+      }
+
+      .katex .mfrac .frac-line
+      {
+        display: inline-block;
+        width: 100%;
+        background: $black;
+        height: 2px;
+    }
   }
 
 
@@ -1398,4 +1415,38 @@ Math Question
     }
 }
 
-// 
+.counter-wrapper{
+    padding: 15px 10px;
+    margin-bottom: -25px;
+    text-align: center;
+      
+  .step-down {
+    margin-top: 5rem;
+  }
+  
+  .counter {
+        display: block;
+        text-align: center;
+        font-size: 3.5em;
+        font-weight: bold;
+        background: linear-gradient(90deg, #37A0F6, #387EE9);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        &.warning {
+            background: linear-gradient(90deg, #FB872B 0%, #D9E021 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+  
+    h5{
+        font-size: 20px;
+        margin-bottom: 0;
+        color: $black;
+
+    }
+}
+
+.previous-task-wrap{
+    height: 100vh;
+}
