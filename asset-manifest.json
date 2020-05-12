@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/prolearn/static/css/main.37a728b1.chunk.css",
-    "main.js": "/prolearn/static/js/main.a7a06e62.chunk.js",
-    "main.js.map": "/prolearn/static/js/main.a7a06e62.chunk.js.map",
+    "main.css": "/prolearn/static/css/main.2f12ccf2.chunk.css",
+    "main.js": "/prolearn/static/js/main.bba70d47.chunk.js",
+    "main.js.map": "/prolearn/static/js/main.bba70d47.chunk.js.map",
     "runtime-main.js": "/prolearn/static/js/runtime-main.435a6383.js",
     "runtime-main.js.map": "/prolearn/static/js/runtime-main.435a6383.js.map",
     "static/css/2.8dbe6964.chunk.css": "/prolearn/static/css/2.8dbe6964.chunk.css",
-    "static/js/2.528ce067.chunk.js": "/prolearn/static/js/2.528ce067.chunk.js",
-    "static/js/2.528ce067.chunk.js.map": "/prolearn/static/js/2.528ce067.chunk.js.map",
+    "static/js/2.7983fc6e.chunk.js": "/prolearn/static/js/2.7983fc6e.chunk.js",
+    "static/js/2.7983fc6e.chunk.js.map": "/prolearn/static/js/2.7983fc6e.chunk.js.map",
     "index.html": "/prolearn/index.html",
-    "precache-manifest.d82ec281db0c6670c0684bf3aa647314.js": "/prolearn/precache-manifest.d82ec281db0c6670c0684bf3aa647314.js",
+    "precache-manifest.ca1ae8065dab02d776223ed531c33df0.js": "/prolearn/precache-manifest.ca1ae8065dab02d776223ed531c33df0.js",
     "service-worker.js": "/prolearn/service-worker.js",
     "static/css/2.8dbe6964.chunk.css.map": "/prolearn/static/css/2.8dbe6964.chunk.css.map",
-    "static/css/main.37a728b1.chunk.css.map": "/prolearn/static/css/main.37a728b1.chunk.css.map",
-    "static/js/2.528ce067.chunk.js.LICENSE.txt": "/prolearn/static/js/2.528ce067.chunk.js.LICENSE.txt",
-    "static/media/style.scss": "/prolearn/static/media/check.4d1adedd.svg",
+    "static/css/main.2f12ccf2.chunk.css.map": "/prolearn/static/css/main.2f12ccf2.chunk.css.map",
+    "static/js/2.7983fc6e.chunk.js.LICENSE.txt": "/prolearn/static/js/2.7983fc6e.chunk.js.LICENSE.txt",
+    "static/media/style.scss": "/prolearn/static/media/check.60836482.svg",
     "static/media/diagram.svg": "/prolearn/static/media/diagram.dab5baf0.svg",
-    "static/media/logo.svg": "/prolearn/static/media/logo.9bff32ab.svg",
+    "static/media/logo.svg": "/prolearn/static/media/logo.c3e098c6.svg",
     "static/media/reward.svg": "/prolearn/static/media/reward.8b4481f1.svg",
     "static/media/user.jpg": "/prolearn/static/media/user.6d97ab05.jpg",
     "static/media/video-default-thumb.jpg": "/prolearn/static/media/video-default-thumb.a54553d4.jpg"
@@ -24,8 +24,8 @@
   "entrypoints": [
     "static/js/runtime-main.435a6383.js",
     "static/css/2.8dbe6964.chunk.css",
-    "static/js/2.528ce067.chunk.js",
-    "static/css/main.37a728b1.chunk.css",
-    "static/js/main.a7a06e62.chunk.js"
+    "static/js/2.7983fc6e.chunk.js",
+    "static/css/main.2f12ccf2.chunk.css",
+    "static/js/main.bba70d47.chunk.js"
   ]
 }
