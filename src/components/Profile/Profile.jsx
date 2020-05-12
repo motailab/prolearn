@@ -24,7 +24,7 @@ export default function Profile() {
                            </div>
                         </div>
                         <div className="col-auto">
-                            <div class="progress_area">
+                            <div class="progress_area" style={{width:"150px"}} >
                                 <CircleProgressBar 
                                     trailStrokeColor="#C4C4C4"
                                     strokeColor="#37A0F6"
