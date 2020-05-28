@@ -1,25 +1,28 @@
-import React, {useEffect, useState } from 'react'
-import { useHistory } from 'react-router-dom'
+import React, { useState } from 'react'
 import SideBar from '../SideBar'
 import Header from '../Header'
 import FullScreenConfetti from '../FullScreenConfetti/FullScreenConfetti'
 
 export default function MainLayout({children}) {
+    const [showSidebar, setShowSidebar] = useState(false);
 
-    // const [showHeader, setShowHeader] =  useState(true); 
-    // const history = useHistory(); 
-    // useEffect(()=>{
-    //     console.log(history);
-    //     if(history.location.pathname === '/profile'){
-    //         setShowHeader(false);
-    //     }
-    // })
+
+    const toggleSidebar = (e) => {
+        e.preventDefault();
+        console.log('got clicked on humberger');
+        setShowSidebar(!showSidebar);
+    }
 
     return (
         <div className="main-panel">
-             {/* {showHeader ? <Header/> : null } */}
-             <Header/>
-            <SideBar />
+            {/* <Header/> */}
+            {/* when searchbar is hidden then show this button for show hide menu */}
+           
+            <button className="btn menubtn" type="button" onClick={toggleSidebar}>
+                <i className="fas fa-bars fa-2x"></i>
+            </button>
+            
+            <SideBar isActive={showSidebar} toggleSidebar={toggleSidebar}/>
             <FullScreenConfetti />
             { children }
         </div>
