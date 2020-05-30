@@ -18,7 +18,7 @@ export default function MainLayout({children}) {
     return (
         <div className="main-panel">
              {/* {showHeader ? <Header/> : null } */}
-             <Header/>
+             {/* <Header/> */}
             <SideBar />
             <FullScreenConfetti />
             { children }

@@ -34,8 +34,8 @@ export default function TaskListContainer(params) {
             <div className="row">
                 <div className="col-lg-8 col-md-6 overViweWrap overview_footer_paddiing">
                     <CustomScroll heightRelativeToParent="100%">
-                        <a href="#" className="overview" onClick={goBack}><i className="fas fa-caret-left"></i> OverView</a>
-                        <h1 className="title">Todays Task</h1>
+                        <a href="#" className="overview" onClick={goBack}><i className="fas fa-caret-left"></i> Home</a>
+                        <h1 className="title">Tasks To Be Completed</h1>
                         <div className="row">
                             {showSpinner ? <Spinner /> :
                                 (

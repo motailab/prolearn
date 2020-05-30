@@ -964,7 +964,6 @@ header{
 }
 
 .physics{
-    padding-top: 25px;
      .rcs-inner-container{
         padding-right: 45px;
         margin-right: -40px !important;
@@ -978,28 +977,30 @@ header{
 }
 .summary{
     text-align: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    h5{
-        font-size: 50px;
-        background: $g-done;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        &.first{
-            background: $t-blue;
+    .box{
+        padding-top: 30px;
+        padding-bottom: 30px;
+        h5{
+            font-size: 50px;
+            background: $g-done;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            &.first{
+                background: $t-blue;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            &.last{
+                background: linear-gradient(10deg, #D4145A 0%, #FBB03B 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
         }
-        &.last{
-            background: linear-gradient(10deg, #D4145A 0%, #FBB03B 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        p{
+            font-size: 12px;
+            margin-bottom:0;
+            color: $black;
         }
-    }
-    p{
-        font-size: 12px;
-        margin-bottom:0;
-        color: $black;
     }
 }
 
@@ -1190,7 +1191,7 @@ background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(151,187,241,1) 0%, rgb
             @include shadow;
             overflow: hidden;
             background: white;
-            top: 80px;
+            top: 0;
             margin-top: 20px;
             h4{
                 font-style: normal;
@@ -1449,4 +1450,18 @@ Math Question
 
 .previous-task-wrap{
     height: 100vh;
+}
+
+.rcs-custom-scrollbar{width:3px !important; border-radius: 50% !important;}
+
+.overViweWrap .rcs-custom-scroll .rcs-inner-container {
+    padding-right: 15px !important;
+}
+
+.question-area{
+    margin-right: -15px;
+}
+
+.overViweWrap .question-area .rcs-custom-scroll .rcs-inner-container {
+    padding-right: 40px !important;
 }

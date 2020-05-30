@@ -78,17 +78,19 @@ export default function LearningPath(props) {
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas, rerum temporibus eaque hic quibusdam,
                     </p> */}
 
-                    <div className="box summary mt-4">
-                        <div className="row">
-                            <div className="col">
-                                <h5 className="first">
-                                    5
-                                </h5>
-                                <p>Total number of hours Study</p>
-                            </div>
-                            <div className="col">
-                                <h5>52</h5>
-                                <p>total Assesments</p>
+                    <div className="summary mt-4">
+                        <div className="box">
+                            <div className="row">
+                                <div className="col">
+                                    <h5 className="first">
+                                        5
+                                    </h5>
+                                    <p>Total number of hours Study</p>
+                                </div>
+                                <div className="col">
+                                    <h5>52</h5>
+                                    <p>total Assesments</p>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -37,7 +37,7 @@ function LoginScreen() {
                             <img src={logo} alt="logo"/>
                         </div>
                         <div className="form-group">
-                            <label htmlFor="email_or_phone">Email/Phone</label>
+                            <label htmlFor="email_or_phone"> Email or Phone </label>
                             <input type="text" placeholder="email or phone" className="form-control" id="email_or_phone" value={emailOrPhone} onChange={e => setEmailOrPhone(e.target.value)} required />
                         </div>
                         <div className="w-100 text-center">

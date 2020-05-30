@@ -5,29 +5,31 @@ export default function RightSidebar() {
 
     return (
         <div className="rightSidebar">
-            <h3 className="title">Weekly</h3>
+            <h3 className="title">This Week</h3>
              <div className="box weeklyReport">
                  <div className="row">
                     <div className="col">
                         <i className="fas fa-graduation-cap"></i>
-                        <h6>lesson taken</h6>
+                        <h6>Lessons Taken</h6>
                         <h4 className="first">25</h4>
                     </div>
                     <div className="col">
                         <i className="fas fa-clock"></i>
-                        <h6>Time Spent</h6>
+                        {/* <h6>Time Spent</h6> */}
+                        <h6>Total Estimated Time Required</h6>
                         <h4>2h 25m</h4>
                     </div>
                     <div className="col">
                         <i className="fas fa-gift"></i>
-                        <h6>Rewards Earned</h6>
+                        <h6>Rewards on Offer</h6>
+                        {/* <h6>Rewards Earned</h6> */}
                         <h4 className="last">4</h4>
                     </div>
                  </div>
              </div>
 
             <div className="reward-wrap">
-                <h3 className="title">Rewards <a href="#" className="gray"> <i className="fas fa-caret-left"></i> See all </a></h3>
+                <h3 className="title">Rewards </h3>
                 <div className="box reward active">
                     <div className="media">
                         <i className="fas fa-gift"></i>
