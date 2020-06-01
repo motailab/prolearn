@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5792e6ceb0fa8259fe7e2a435f6d2ada",
+    "revision": "e6bb954462a5653fdfa3b675eb52e0b3",
     "url": "/prolearn/index.html"
   },
   {
-    "revision": "7c69b11aaeb004892786",
+    "revision": "edb11d796fb4bbd1cdde",
     "url": "/prolearn/static/css/2.8dbe6964.chunk.css"
   },
   {
-    "revision": "6d4a5f0363c4357ef6e0",
-    "url": "/prolearn/static/css/main.2f12ccf2.chunk.css"
+    "revision": "3de3174fc8cecdea40be",
+    "url": "/prolearn/static/css/main.31e0d845.chunk.css"
   },
   {
-    "revision": "7c69b11aaeb004892786",
-    "url": "/prolearn/static/js/2.7983fc6e.chunk.js"
+    "revision": "edb11d796fb4bbd1cdde",
+    "url": "/prolearn/static/js/2.919a371a.chunk.js"
   },
   {
     "revision": "ca3cfcda77dc9f4f71fda9fdfcf14fb0",
-    "url": "/prolearn/static/js/2.7983fc6e.chunk.js.LICENSE.txt"
+    "url": "/prolearn/static/js/2.919a371a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6d4a5f0363c4357ef6e0",
-    "url": "/prolearn/static/js/main.d32cceda.chunk.js"
+    "revision": "3de3174fc8cecdea40be",
+    "url": "/prolearn/static/js/main.5eb91475.chunk.js"
   },
   {
     "revision": "d9bbd20996996f414d8f",
@@ -34,6 +34,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "dab5baf00c7ee39da3e44d3e73909462",
     "url": "/prolearn/static/media/diagram.dab5baf0.svg"
+  },
+  {
+    "revision": "7b53815c4ba2090c8a322dade2b443cb",
+    "url": "/prolearn/static/media/flag.7b53815c.png"
   },
   {
     "revision": "c3e098c6f62513893987f3f6f4ed3b1c",
