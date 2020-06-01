@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { AppContext } from '../context/context';
 import Component from '../utils/Components';
-import RightSidebar from './RightSidebar';
+import TaskDetailsRightSidebar from './TaskDetailsRightSidebar';
 import CountDown from './CountDown/CountDown';
 
 export default function TaskContainer(params) {
@@ -21,14 +21,14 @@ export default function TaskContainer(params) {
     }
 
     return (
-        <div className="taskListContainer px-4">
+        <div className="taskListContainer p-4">
             <div className="row">
-                <div className="col-md-8 overViweWrap home">
+                <div className="col-lg-8 col-md-7 overViweWrap home">
                     {selectedTask ? <Component name={name.toLowerCase()} subject={selectedTask} timeEnd={timeEnd} /> : <h3>Component not ready</h3>}
                 </div>
-                <div className="col-md-4">
+                <div className="col-lg-4 col-md-5">
                     <CountDown  duration={selectedTask ? selectedTask.duration : 0} onFinish={onFinish} />
-                    <RightSidebar />
+                    <TaskDetailsRightSidebar />
                 </div>
             </div>
         </div>  

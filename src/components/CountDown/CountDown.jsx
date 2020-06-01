@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState} from 'react';
 
-
 export default function CountDown({duration, onFinish, onStart, onHalf, stopTimer}) {
     const timerRef = useRef();
     const [warning, setWarning] = useState(false);

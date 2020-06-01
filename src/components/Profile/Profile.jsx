@@ -24,7 +24,7 @@ export default function Profile() {
                            </div>
                         </div>
                         <div className="col-auto">
-                            <div class="progress_area" style={{width:"150px"}} >
+                            <div className="progress_area" style={{width:"150px"}} >
                                 <CircleProgressBar 
                                     trailStrokeColor="#C4C4C4"
                                     strokeColor="#37A0F6"
@@ -37,7 +37,8 @@ export default function Profile() {
                     </div>
                 </div>
             </div>
-            <div className="profile-content px-4 taskListContainer">
+            <div className="profile-content p-4 taskListContainer">
+              <CustomScroll heightRelativeToParent="100vh">
                 <div className="row">
                     <div className="col-lg-8 col-md-6 overViweWrap">
                          <div className="row">
@@ -133,7 +134,7 @@ export default function Profile() {
                                
                              </div>
                              <div className="col-lg-4">
-                                 <div className="interest sticky-top">
+                                 <div className="interest">
                                      <h4>Interest</h4>
                                      <div className="text-wrap">
                                     
@@ -141,11 +142,11 @@ export default function Profile() {
                                          I love singing and love to watch historicaly movie. Also love gardening and software coding.
                                          </p>
                                         <ul>
-                                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                                            <li><a href="#"><i className="fab fa-facebook-f"></i></a></li>
+                                            <li><a href="#"><i className="fab fa-twitter"></i></a></li>
+                                            <li><a href="#"><i className="fab fa-google-plus-g"></i></a></li>
+                                            <li><a href="#"><i className="fab fa-instagram"></i></a></li>
+                                            <li><a href="#"><i className="fab fa-pinterest-p"></i></a></li>
                                         </ul>
                                      </div>
                                  </div>
@@ -157,6 +158,7 @@ export default function Profile() {
                        <RightSidebar/>
                     </div>
                 </div>       
+              </CustomScroll>
             </div>
         </div>          
     );

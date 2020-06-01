@@ -15,7 +15,7 @@ export default function RecomendedPlayer({ url }) {
                         config={{ file: { attributes: { controlsList: 'nodownload', preload: 'none'  } } }}
                         onContextMenu={e => e.preventDefault()}/>
                     </div>
-                    <div className="col pl-0">
+                    <div className="col-5 pl-0">
                         <a href="#" className="title">How & Why We Read</a>
                         <p>- CrashCourse</p>
                         <div className="match">

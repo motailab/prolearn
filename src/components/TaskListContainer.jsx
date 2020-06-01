@@ -4,10 +4,9 @@ import CustomScroll from 'react-custom-scroll';
 import { useHistory } from 'react-router-dom';
 import { AppContext } from '../context/context';
 import TaskCard from './TaskCard'
-import RightSidebar from './RightSidebar';
 import Spinner from './Spinner/Spinner';
-import CircleProgressBar from './CircleProgressBar/CircleProgressBar';
 import RecomendedVideo from './RecomendedTask/RecomendedVideo';
+import OverviewRightSidebar from './OverviewRightSidebar';
 
 export default function TaskListContainer(params) {
     const [subject_list, setSubjectList] = useState([]);
@@ -30,10 +29,10 @@ export default function TaskListContainer(params) {
     }
 
     return (
-        <div className="taskListContainer px-4">
+        <div className="taskListContainer p-4">
             <div className="row">
-                <div className="col-lg-8 col-md-6 overViweWrap overview_footer_paddiing">
-                    <CustomScroll heightRelativeToParent="100%">
+                <div className="col-lg-8 col-md-7 overViweWrap">
+                    <CustomScroll heightRelativeToParent="100vh">
                         <a href="#" className="overview" onClick={goBack}><i className="fas fa-caret-left"></i> Home</a>
                         <h1 className="title">Tasks To Be Completed</h1>
                         <div className="row">
@@ -46,7 +45,7 @@ export default function TaskListContainer(params) {
                                             </div>
                                         ))}
 
-                                        <div className="col-md-6">
+                                        <div className="col-lg-6">
                                             <RecomendedVideo 
                                             title='How And Why Read'
                                             courseType='crash Course'
@@ -57,7 +56,7 @@ export default function TaskListContainer(params) {
                                             }}/>
                                         </div>
 
-                                        <div className="col-md-6">
+                                        <div className="col-lg-6">
                                             <RecomendedVideo 
                                             title='How And Why Read'
                                             courseType='Rec Course'
@@ -97,8 +96,8 @@ export default function TaskListContainer(params) {
                         </div>
                     </div> */}
                 </div>
-                <div className="col-lg-4 col-md-6">
-                   <RightSidebar/>
+                <div className="col-lg-4 col-md-5">
+                   <OverviewRightSidebar/>
                 </div>
             </div>
         </div>          

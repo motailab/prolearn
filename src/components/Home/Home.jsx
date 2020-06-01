@@ -4,16 +4,18 @@ import 'react-calendar/dist/Calendar.css';
 import RightSidebar from '../RightSidebar';
 import CustomButton from '../CustomButton/CustomButton'
 import Summary from '../Summary/Summary';
+import CustomScroll from 'react-custom-scroll';
 
 export default function Home(props) {
     
     return (
-        <div className="taskListContainer px-4">
+        <div className="taskListContainer p-4">
             <div className="row">
-                <div className="col-lg-8 col-md-6 overViweWrap home">
+                <div className="col-lg-8 col-md-7 overViweWrap home">
+                  <CustomScroll heightRelativeToParent="100vh">
                     <div className="row">
                         <Summary />
-                        <div className="col-lg-3">
+                        <div className="col-xl-3">
                             <h4 className="title">Countdown</h4>
                             <div className="box">
                                 <div className="circleProgressBar">
@@ -30,7 +32,7 @@ export default function Home(props) {
 
                     <div className="row mt-3">
                         <div className="col-lg-12">
-                            <h4 className="title mb-3">Quote Of The Day</h4>
+                            {/* <h4 className="title mb-3">Quote Of The Day</h4> */}
                             <div className="box quote">
                                 <h3>“There are no shortcuts to any place worth going.”</h3>
                             </div>
@@ -56,9 +58,12 @@ export default function Home(props) {
                             </div>
                         </div>
                     </div>
+                  </CustomScroll>
                 </div>
-                <div className="col-lg-4 col-md-6">
-                   <RightSidebar/>
+                <div className="col-lg-4 col-md-5">
+                    
+                    <RightSidebar/>
+                   
                 </div>
             </div>
         </div>          

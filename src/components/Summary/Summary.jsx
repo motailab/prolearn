@@ -4,14 +4,14 @@ import { Link } from 'react-router-dom';
 export default function Summary(props) {
     
     return (
-        <div className="col-lg-9">
+        <div className="col-xl-9">
             <h4 className="title">Summary</h4>
             <div className="summary">
                 <div className="row">
-                    <div className="col-4">
+                    <div className="col-lg-4">
                         <div className="row">
                             <div className="col">
-                                <div className="box">
+                                <div className="box task_complete">
                                     <Link to="/todays-task">
                                         <h5 className="first">
                                             4
@@ -22,7 +22,7 @@ export default function Summary(props) {
                             </div>
                         </div>
                     </div>
-                    <div className="col-8">
+                    <div className="col-lg-8">
                         <div className="box">
                             <div className="row">
                                 <div className="col">

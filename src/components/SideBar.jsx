@@ -1,17 +1,14 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import {NavLink } from 'react-router-dom';
 import logo from '../assets/images/logo.svg';
 
-function SideBar(props) {
-
-    const checkActive = (match, location) => {
-        if(!location) return false;
-        const {pathname} = location;
-        return pathname === "/";
-    }
+function SideBar({isActive, toggleSidebar}) {
 
     return (
-        <div className="sidebar off-canvas-sidebar">
+        <div className={`sidebar off-canvas-sidebar ${isActive ? 'open' : ''}`}>
+
+            <button className="btn menubtn" onClick={toggleSidebar}><i class="fas fa-times"></i></button>
+
             <NavLink to='/prolearn' className="logo"><img src={logo} alt=""/></NavLink>
             <ul>
                 <li>
