@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react';
 import CustomScroll from 'react-custom-scroll';
 import { AppContext } from '../../context/context';
-import { TYPES } from '../../context/reducers';
+import  TYPES  from '../../context/actionTypes';
 import { fetchData } from '../../utils/dataClient';
 import RightSidebar from '../RightSidebar';
 import Calender from 'react-calendar';

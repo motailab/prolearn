@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 import CustomScroll from 'react-custom-scroll';
 import { AppContext } from '../../context/context';
-import { TYPES } from '../../context/reducers';
+import  TYPES  from '../../context/actionTypes';
 import Question from './Question';
 import { Link } from 'react-router-dom';
 

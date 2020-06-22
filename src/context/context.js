@@ -1,5 +1,7 @@
 import React, { createContext, useReducer, useEffect } from 'react';
-import{ reducers, TYPES }from './reducers';
+import { reducers } from './reducers';
+import TYPES from './actionTypes';
+
 import { fetchData } from '../utils/dataClient';
 
 //initial state
@@ -24,6 +26,10 @@ const initialState = {
     task_history: {
         loading: false,
         tasks: null
+    },
+
+    home: {
+        summary: null
     }
 };
 

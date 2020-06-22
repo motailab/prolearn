@@ -1,12 +1,20 @@
-import React from 'react';
+import React, { useEffect, useContext } from 'react';
 import CircleProgressBar from '../CircleProgressBar/CircleProgressBar';
-import 'react-calendar/dist/Calendar.css';
 import RightSidebar from '../RightSidebar';
 import CustomButton from '../CustomButton/CustomButton'
 import Summary from '../Summary/Summary';
+import { AppContext } from '../../context/context';
+import TYPES from '../../context/actionTypes';
+import { fetchData } from '../../utils/client';
+import 'react-calendar/dist/Calendar.css';
 
 export default function Home(props) {
-    
+    const {state, dispatch} = useContext(AppContext);
+    useEffect(() => {
+
+    },[]);
+
+
     return (
         <div className="taskListContainer px-4">
             <div className="row">

@@ -1,18 +1,4 @@
-export const  TYPES = {
-    TASK_DONE: 'TASK_DONE',
-    TASK_LOADED: 'TASK_LOADED',
-    LOAD_REWARD_SUBJECT: 'LOAD_REWARD_SUBJECT',
-    REWARD_SUBJECT_LOADED: 'REWARD_SUBJECT_LOADED',
-    LOADING_REWARD_CLASS: 'LOADING_REWARD_CLASS',
-    REWARD_CLASS_LOADED: 'REWARD_CLASS_LOADED',
-    LOADING_REWARD_EXCERCIES: 'LOADING_REWARD_EXCERCIES',
-    REWARD_EXCERCIES_LOADED: 'REWARD_EXCERCIES_LOADED',
-    SHOW_CONFETTI: 'SHOW_CONFETTI',
-    HIDE_CONFETTI: 'HIDE_CONFETTI',
-    LOADING_TASK_HISTORY: 'LOADING_TASK_HISTORY',
-    LOADED_TASK_HISTORY: 'LOADED_TASK_HISTORY',
-};
-
+import TYPES from './actionTypes';
 
 export const  reducers = (state={}, action) => {
     switch (action.type) {
@@ -156,6 +142,14 @@ export const  reducers = (state={}, action) => {
                     showTime: 15,
                     message: '',
                     show: false
+                }
+            }
+        case TYPES.LOADED_SUMMARY:
+            return {
+                ...state,
+                home: {
+                    ...state.home,
+                    summary: {...action.payload}
                 }
             }
         default:

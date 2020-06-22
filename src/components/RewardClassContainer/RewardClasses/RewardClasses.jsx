@@ -2,7 +2,7 @@ import React, { useEffect, useContext } from 'react'
 import { useHistory, useParams } from 'react-router-dom';
 import RewardTask from './RewardTask/RewardTask';
 import { AppContext } from '../../../context/context';
-import { TYPES } from '../../../context/reducers';
+import  TYPES  from '../../../context/actionTypes';
 import { fetchData } from '../../../utils/dataClient';
 import Spinner from '../../Spinner/Spinner';
 

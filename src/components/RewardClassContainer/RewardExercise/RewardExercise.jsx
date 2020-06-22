@@ -1,7 +1,7 @@
 import React, { useEffect, useContext, useState } from 'react';
 import { useParams, useHistory, useRouteMatch } from 'react-router-dom';
 import { AppContext } from '../../../context/context';
-import { TYPES } from '../../../context/reducers';
+import  TYPES  from '../../../context/actionTypes';
 import { fetchData } from '../../../utils/dataClient';
 import Spinner from '../../Spinner/Spinner';
 import MathQuestion from './MathQuestion/MathQuestion';

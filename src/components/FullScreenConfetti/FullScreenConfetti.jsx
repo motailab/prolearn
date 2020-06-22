@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useContext } from 'react';
 import confetti from 'canvas-confetti';
 import { AppContext } from '../../context/context';
-import { TYPES } from '../../context/reducers';
+import  TYPES  from '../../context/actionTypes';
 
 export default function FullScreenConfetti() {
     const canvas = useRef();
