@@ -32,7 +32,7 @@ body {
         color: #90a1b5;
     }
     background: #eef2f6;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 
@@ -838,10 +838,10 @@ header{
 }
 
 .overViweWrap{
-    min-height: 100vh;
+    // min-height: 100vh;
     position: relative;
     box-shadow: 10px 0 15px -5px rgba(0, 0, 0, 0.08);
-    padding-top: 20px;
+    // padding-top: 20px;
     .rcs-custom-scroll .rcs-inner-container{
         padding-right: 25px;
     }
@@ -887,7 +887,8 @@ header{
 
 // right sidebar 
 .rightSidebar{
-    padding:30px 10px;
+    padding:0 10px;
+    padding-right: 15px;
     .weeklyReport{
         padding: 25px;
         i{
@@ -924,7 +925,6 @@ header{
     }
     
     .reward-wrap{
-    
         margin-top: 25px;
         .reward{
             background: #f6fcff;
@@ -961,11 +961,19 @@ header{
                 }
             }
         }
+        &.details{
+            .reward{
+                cursor: pointer;
+                i{
+                    color: $deepGray !important;
+                }
+            }
+        }
     }
 }
 
 .physics{
-    padding-top: 25px;
+    padding-right: 10px;
      .rcs-inner-container{
         padding-right: 45px;
         margin-right: -40px !important;
@@ -975,32 +983,47 @@ header{
 // Home screen desing 
 
 .home{
-    padding-right: 25px;
+    padding-right: 10px;
 }
 .summary{
     text-align: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    h5{
-        font-size: 50px;
-        background: $g-done;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        &.first{
+    .box{
+        padding-top: 30px;
+        padding-bottom: 30px;
+        h5{
+            font-size: 50px;
+            background: $g-done;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            &.first{
+                background: $t-blue;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            &.last{
+                background: linear-gradient(10deg, #D4145A 0%, #FBB03B 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+        p{
+            font-size: 12px;
+            margin-bottom:0;
+            color: $black;
+        }
+
+        &.task_complete{
             background: $t-blue;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            h5{
+                font-size: 50px;
+                background: none;
+                color: #ffffff;
+                -webkit-text-fill-color: white;
+            }
+            p{
+                color: white;
+            }
         }
-        &.last{
-            background: linear-gradient(10deg, #D4145A 0%, #FBB03B 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-    }
-    p{
-        font-size: 12px;
-        margin-bottom:0;
-        color: $black;
     }
 }
 
@@ -1079,6 +1102,7 @@ header{
 background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(151,187,241,1) 0%, rgba(151,202,247,1) 100%);
     .access_inner_wrap{
         width: 420px;
+        padding: 0 15px;
         .logo {
             text-align: center;
             margin-top: -50px;
@@ -1152,9 +1176,10 @@ background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(151,187,241,1) 0%, rgb
         }
     }
     .profile-content{
-        .overViweWrap{
-            padding-top: 35px;
-        }
+        padding-bottom: 100px;
+        // .overViweWrap{
+        //     padding-top: 35px;
+        // }
         .information{
             .box{
                 border-left: 2px solid #FF9800;
@@ -1191,7 +1216,7 @@ background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(151,187,241,1) 0%, rgb
             @include shadow;
             overflow: hidden;
             background: white;
-            top: 80px;
+            top: 0;
             margin-top: 20px;
             h4{
                 font-style: normal;
@@ -1388,15 +1413,10 @@ Math Question
 
 .video-task {
     width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    flex-flow: column;
     padding: 1em;
     background: #fff;
     border-radius: 3px;
+    padding-bottom: 40px;
 
     .video-player {
         position: relative;
@@ -1448,27 +1468,93 @@ Math Question
     }
 }
 
-.previous-task-wrap{
-    height: 100vh;
+// .previous-task-wrap{
+//     height: 100vh;
+// }
+
+.rcs-custom-scroll {
+    padding-bottom: 25px;
+    .rcs-custom-scrollbar{width:3px !important; border-radius: 50% !important;}
 }
 
+.overViweWrap .rcs-custom-scroll .rcs-inner-container {
+    padding-right: 15px !important;
+}
+
+.question-area{
+    margin-right: -15px;
+}
+
+.overViweWrap .question-area .rcs-custom-scroll .rcs-inner-container {
+    padding-right: 40px !important;
+}
+
+.progressArea{
+    padding-right: 10px;
+}
+
+.progressInwrap{
+    padding-right: 15px;
+}
 
 /**
 responsive styles well goes here below
 **/
-.menubtn {
+.sidebarHeader {
+    display: none;
+    background: white;
+    padding: 15px;
+    text-align: right;
+    button{
+        color: #212529;
+        font-size: 12px;
+        &:focus{
+            box-shadow: none;
+            outline: none;
+        }
+    }
+}
+
+.sidebar .menubtn{
     display: none;
 }
 
-$breakpoint-tablet: 768px;
+@media(max-width: 1200px) {
+    .rightSidebar .weeklyReport{
+        text-align: center;
+        .col-xl-4{
+            h4 {
+                margin-top: 10px;
+                margin-bottom: 15px;
+                border-bottom: 1px solid #d7d7d7;
+                padding-bottom: 10px;
+            }
+            &:last-child h4{
+                border: 0;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
 
-@media(max-width: $breakpoint-tablet) {
-    .menubtn {
+@media(max-width: 990px) {
+    .home {
+        padding-right: 0;
+    }
+
+    .rightSidebar {
+        padding-right: 0;
+    }
+    .sidebarHeader {
         display: block;
     }
 
     .main-panel {
         width: 100%;
+    }
+
+    .select-area{
+        display: block !important;
     }
 
     .sidebar {
@@ -1479,13 +1565,86 @@ $breakpoint-tablet: 768px;
         left: 0;
     }
 
+    .literature{
+        padding-right: 10px;
+    }
+
     .sidebar {
         &.open {
             >.btn {
                 position: absolute;
-                right: 0;
+                right: -30px;
                 top: 0;
+                display: inline-block;
             }
         }
     }
+
+    .rcs-custom-scroll {
+        padding-bottom: 100px;
+    }
+
+    .profile-area .profile-header{
+        padding-top: 0;
+    }
 }
+
+@media(max-width: 766px) {
+    body{
+        overflow-y: auto;
+    }
+    .rcs-custom-scroll .rcs-outer-container {
+        overflow: visible !important;
+    }
+    .rcs-custom-scroll {
+        height: auto !important;
+    }
+
+    .overViweWrap .rcs-custom-scroll .rcs-inner-container {
+        padding-right: 0 !important;
+    }
+
+    .progressInwrap {
+        padding-right: 0;
+        .box{
+            padding: 0;
+        }
+    }
+}
+
+
+/**
+simple skeleton loading animation
+**/
+
+.skeleton-box {
+    display: inline-block;
+    height: 1em;
+    position: relative;
+    overflow: hidden;
+    background-color: #DDDBDD;
+  
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      transform: translateX(-100%);
+      background-image: linear-gradient(
+        90deg,
+        rgba(#fff, 0) 0,
+        rgba(#fff, 0.2) 20%,
+        rgba(#fff, 0.5) 60%,
+        rgba(#fff, 0)
+      );
+      animation: shimmer 2s infinite;
+      content: '';
+    }
+  
+    @keyframes shimmer {
+      100% {
+        transform: translateX(100%);
+      }
+    }
+  }

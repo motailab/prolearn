@@ -84,9 +84,8 @@ export default function Physics({subject, ...rest}) {
 
     return (
         <div className="physics">
-             <Link className="overview" to="/todays-task"><i className="fas fa-caret-left"></i> Back </Link>
             {/* <a href="#" className="overview" onClick={goBack}><i className="fas fa-caret-left"></i> Back</a> */}
-            <h4 className="title mb-3">Physics</h4>
+            <h4 className="title mb-3"><Link className="overview" to="/todays-task"><i className="fas fa-caret-left"></i> Back </Link> || Physics</h4>
             <div className="question-area" style={{height: "85vh", display: "flex"}}>
                 <CustomScroll heightRelativeToParent="100%">
                     {/** question and guess component**/}

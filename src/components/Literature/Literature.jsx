@@ -53,13 +53,12 @@ export default function Literature({subject}) {
     }, [subject]);
 
     return (
-        <div className='literature p-4'>
+        <div className='literature'>
             {redirect ? <Redirect to="/" /> : null}
-            <Link className="overview" to="/todays-task"><i className="fas fa-caret-left"></i> Back </Link>
-            <h4 className="title">Literature</h4>
+            <h4 className="title mb-3"> <Link className="overview" to="/todays-task"><i className="fas fa-caret-left"></i> Back </Link> || Literature</h4>
             <form onSubmit={handleFormSubmit}>
                 <div className="form-group">
-                    <textarea style={{width: '100%', fontSize:'12px', height: '400px'}} 
+                    <textarea style={{width: '100%', fontSize:'12px', height: '500px'}} 
                     className="form-control rounded" name='answer' onChange={handleChange} 
                     value={answer} 
                     placeholder="Harper Lee’s was an American novelist widely known for To Kill a Mockingbird, published in 1960. Immediately

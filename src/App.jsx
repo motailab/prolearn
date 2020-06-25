@@ -40,7 +40,7 @@ function App() {
                       <LearningPath />
                     </Route>
 
-                    <Route exact path="/todays-task/subject/:name">
+                    <Route exact path="/todays-task/subject/:name/:id">
                       <TaskContainer />
                     </Route>
 

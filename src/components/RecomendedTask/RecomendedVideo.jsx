@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link} from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import thumb from '../../assets/images/video-default-thumb.jpg';
 
 
@@ -36,7 +36,7 @@ export default function RecomendedVideo({title, match, courseType, ...props}) {
                             }
                         }}>
                           {title}
-                          </Link>
+                        </Link>
                           </h4>
                         <p>- {courseType}</p>
                         <div className="match">

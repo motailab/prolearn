@@ -37,7 +37,8 @@ export default function Profile() {
                     </div>
                 </div>
             </div>
-            <div className="profile-content px-4 taskListContainer">
+            <div className="profile-content p-4 taskListContainer">
+              <CustomScroll heightRelativeToParent="100vh">
                 <div className="row">
                     <div className="col-lg-8 col-md-6 overViweWrap">
                          <div className="row">
@@ -133,7 +134,7 @@ export default function Profile() {
                                
                              </div>
                              <div className="col-lg-4">
-                                 <div className="interest sticky-top">
+                                 <div className="interest">
                                      <h4>Interest</h4>
                                      <div className="text-wrap">
                                     
@@ -157,6 +158,7 @@ export default function Profile() {
                        <RightSidebar/>
                     </div>
                 </div>       
+              </CustomScroll>
             </div>
         </div>          
     );

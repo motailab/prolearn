@@ -46,11 +46,11 @@ export default function Progress(props) {
     }, [subjects, active]);
 
     return (
-        <div className="taskListContainer px-4">
+        <div className="taskListContainer p-4">
             <div className="row">
-                <div className="col-lg-4 overViweWrap">
+                <div className="col-md-4 overViweWrap">
                     <div className="previous-task-wrap">
-                        <CustomScroll heightRelativeToParent="100%">
+                        <CustomScroll heightRelativeToParent="100vh">
                             {showSpinner ? <Spinner /> :
                                 subjects.map((item, index) => (
                                     <TaskCard {...item} link={`/progress/${item.title}`} key={item.id} index={index}/>
@@ -60,8 +60,10 @@ export default function Progress(props) {
                     </div>
                    
                 </div>
-                <div className="col-lg-8">
-                    <div className="box mt-4">
+                <div className="col-md-8 progressArea">
+                  <CustomScroll heightRelativeToParent="100vh">
+                     <div className="progressInwrap">
+                     <div className="box mt-4">
                         <ResponsiveContainer height={300} width='100%'>
                             <BarChart
                                 data={data}
@@ -97,7 +99,9 @@ export default function Progress(props) {
                                 <Line yAxisId="right" type="monotone" dataKey="uv" stroke="#82ca9d" />
                             </LineChart>
                         </ResponsiveContainer>
-                    </div>           
+                    </div> 
+                     </div>
+                  </CustomScroll>
                 </div>
             </div>
         </div>
